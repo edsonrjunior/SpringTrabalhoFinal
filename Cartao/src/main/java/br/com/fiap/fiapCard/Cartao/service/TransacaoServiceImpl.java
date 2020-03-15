@@ -32,7 +32,6 @@ public class TransacaoServiceImpl implements TransacaoService {
         } else {
             return transacaoRepository.findAllByDateRange(idCartao, dataIni, dataFim);
         }
-
     }
 
     @Override
@@ -46,12 +45,15 @@ public class TransacaoServiceImpl implements TransacaoService {
         Transacao transacao = new Transacao(createTransacaoDTO);
 
         //Validar se cartao está ativo
+        //Todo Verificar se o cartão está expirado
         if (transacao.getCartao().getStatus() != StatusCartao.ATIVO){
+            //Todo Devolver mensagem de erro (Cartão não-ativo)
             return null;
         }
 
         //Consumir limite do cartão
         cartaoService.consumirLimite(transacao.getCartao().getId(), transacao.getValor());
+        //Todo Tratar o limite do cartão para devolver mensagem de erro
         return new TransacaoDTO(transacaoRepository.save(transacao));
     }
 

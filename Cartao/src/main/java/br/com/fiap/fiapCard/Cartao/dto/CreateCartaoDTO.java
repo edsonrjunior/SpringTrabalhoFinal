@@ -19,9 +19,6 @@ public class CreateCartaoDTO {
     @Positive
     private Double valorLimite;
 
-    @Positive
-    private Double valorConsumido;
-
     public Integer getIdAluno() {
         return idAluno;
     }
@@ -54,11 +51,4 @@ public class CreateCartaoDTO {
         this.valorLimite = valorLimite;
     }
 
-    public Double getValorConsumido() {
-        return valorConsumido;
-    }
-
-    public void setValorConsumido(Double valorConsumido) {
-        this.valorConsumido = valorConsumido;
-    }
 }

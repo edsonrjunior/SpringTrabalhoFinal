@@ -39,9 +39,8 @@ public class TransacaoController {
     @PostMapping(consumes = "application/json", produces = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Object> create(@RequestBody @Valid CreateTransacaoDTO createTransacaoDTO){
-
         TransacaoDTO transacaoDTO = transacaoService.create(createTransacaoDTO);
-
+        //Todo Enviar mensagem personalizada de acordo com o erro na criação da transação
         if (transacaoDTO == null) {
             return new ResponseEntity<>("Transacao não efetivada. Contate a FIAP", HttpStatus.BAD_REQUEST);
         } else {

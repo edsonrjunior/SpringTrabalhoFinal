@@ -70,7 +70,7 @@ public class CartaoServiceImpl implements CartaoService {
 
     @Override
     public CartaoDTO consumirLimite(Integer idCartao, Double valor) {
-        //Implementar lógica para verificar se ultrapassa limite do cartao
+        //Todo Implementar lógica para verificar se ultrapassa limite do cartao e devolver mensagem de erro
         Cartao cartao = getCartaoById(idCartao);
         cartao.setValorConsumido(cartao.getValorConsumido() + valor);
         return new CartaoDTO(CartaoRepository.save(cartao));

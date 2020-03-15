@@ -6,6 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class CartaoApplicationTests {
 
+	//Todo Implementar testes unitários
+
 	@Test
 	void contextLoads() {
 	}

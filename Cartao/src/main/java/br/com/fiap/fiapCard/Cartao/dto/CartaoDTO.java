@@ -8,6 +8,8 @@ import java.util.Date;
 public class CartaoDTO {
 
     private Integer id;
+
+    //Todo Fazer o link do idAluno com o MS de Alunos (através dos endpoints)
     private Integer idAluno;
     private String numero;
     private Date dataExp;
@@ -23,7 +25,7 @@ public class CartaoDTO {
         this.numero = createCartaoDTO.getNumero();
         this.dataExp = createCartaoDTO.getDataExp();
         this.valorLimite = createCartaoDTO.getValorLimite();
-        this.valorConsumido = createCartaoDTO.getValorConsumido();
+        this.valorConsumido = 0.0;
         this.status = StatusCartao.BLOQUEADO;
     }
 

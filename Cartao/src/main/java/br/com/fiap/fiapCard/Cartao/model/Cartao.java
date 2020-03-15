@@ -52,7 +52,7 @@ public class Cartao {
         this.numero = createCartaoDTO.getNumero();
         this.dataExp = createCartaoDTO.getDataExp();
         this.valorLimite = createCartaoDTO.getValorLimite();
-        this.valorConsumido = createCartaoDTO.getValorConsumido();
+        this.valorConsumido = 0.0;
         this.status = StatusCartao.BLOQUEADO;
     }
 

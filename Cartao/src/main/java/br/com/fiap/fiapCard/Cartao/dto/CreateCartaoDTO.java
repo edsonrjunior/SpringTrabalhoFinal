@@ -1,7 +1,5 @@
 package br.com.fiap.fiapCard.Cartao.dto;
 
-import br.com.fiap.fiapCard.Cartao.enums.StatusCartao;
-
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
@@ -17,6 +15,12 @@ public class CreateCartaoDTO {
 
     @Future
     private Date dataExp;
+
+    @Positive
+    private Double valorLimite;
+
+    @Positive
+    private Double valorConsumido;
 
     public Integer getIdAluno() {
         return idAluno;
@@ -42,4 +46,19 @@ public class CreateCartaoDTO {
         this.dataExp = dataExp;
     }
 
+    public Double getValorLimite() {
+        return valorLimite;
+    }
+
+    public void setValorLimite(Double valorLimite) {
+        this.valorLimite = valorLimite;
+    }
+
+    public Double getValorConsumido() {
+        return valorConsumido;
+    }
+
+    public void setValorConsumido(Double valorConsumido) {
+        this.valorConsumido = valorConsumido;
+    }
 }

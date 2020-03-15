@@ -37,38 +37,46 @@ public class CartaoServiceImpl implements CartaoService {
 
     @Override
     public CartaoDTO findById(Integer id) {
-        Cartao Cartao = getCartaoById(id);
-        return new CartaoDTO(Cartao);
+        Cartao cartao = getCartaoById(id);
+        return new CartaoDTO(cartao);
     }
 
     @Override
     public CartaoDTO ativarCartao(Integer id) {
-        Cartao Cartao = getCartaoById(id);
-        Cartao.setStatus(StatusCartao.ATIVO);
-        return new CartaoDTO(CartaoRepository.save(Cartao));
+        Cartao cartao = getCartaoById(id);
+        cartao.setStatus(StatusCartao.ATIVO);
+        return new CartaoDTO(CartaoRepository.save(cartao));
     }
 
     @Override
     public CartaoDTO bloquearCartao(Integer id) {
-        Cartao Cartao = getCartaoById(id);
-        Cartao.setStatus(StatusCartao.BLOQUEADO);
-        return new CartaoDTO(CartaoRepository.save(Cartao));
+        Cartao cartao = getCartaoById(id);
+        cartao.setStatus(StatusCartao.BLOQUEADO);
+        return new CartaoDTO(CartaoRepository.save(cartao));
     }
 
     @Override
     public CartaoDTO inativarCartao(Integer id) {
-        Cartao Cartao = getCartaoById(id);
-        Cartao.setStatus(StatusCartao.INATIVO);
-        return new CartaoDTO(CartaoRepository.save(Cartao));
+        Cartao cartao = getCartaoById(id);
+        cartao.setStatus(StatusCartao.INATIVO);
+        return new CartaoDTO(CartaoRepository.save(cartao));
     }
 
     @Override
     public CartaoDTO create(CreateCartaoDTO createCartaoDTO) {
-        Cartao Cartao = new Cartao(createCartaoDTO);
-        return new CartaoDTO(CartaoRepository.save(Cartao));
+        Cartao cartao = new Cartao(createCartaoDTO);
+        return new CartaoDTO(CartaoRepository.save(cartao));
     }
 
-     private Cartao getCartaoById(Integer id) {
+    @Override
+    public CartaoDTO consumirLimite(Integer idCartao, Double valor) {
+        //Implementar lógica para verificar se ultrapassa limite do cartao
+        Cartao cartao = getCartaoById(idCartao);
+        cartao.setValorConsumido(cartao.getValorConsumido() + valor);
+        return new CartaoDTO(CartaoRepository.save(cartao));
+    }
+
+    private Cartao getCartaoById(Integer id) {
         return CartaoRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }

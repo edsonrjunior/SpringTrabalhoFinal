@@ -12,6 +12,9 @@ services:
       - "80:80"
     networks:
       - net
+    depends_on:
+      - aluno
+      - cartao
 
   aluno-mysql:
     container_name: aluno-mysql

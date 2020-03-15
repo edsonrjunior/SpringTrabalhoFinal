@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "TB_Cartao")
+@Table(name = "TB_CARTAO")
 public class Cartao {
 
 
@@ -25,17 +25,25 @@ public class Cartao {
     private Date dataExp;
 
     @Column
+    private Double valorLimite;
+
+    @Column
+    private Double valorConsumido;
+
+    @Column
     @Enumerated(EnumType.STRING)
     private StatusCartao status;
 
     public Cartao() {
     }
 
-    public Cartao(Integer id, Integer idAluno, String numero, Date dataExp, StatusCartao statusCartao) {
+    public Cartao(Integer id, Integer idAluno, String numero, Date dataExp, Double valorLimite, Double valorConsumido, StatusCartao statusCartao) {
         this.id = id;
         this.idAluno = idAluno;
         this.numero = numero;
         this.dataExp = dataExp;
+        this.valorLimite = valorLimite;
+        this.valorConsumido = valorConsumido;
         this.status = statusCartao;
     }
 
@@ -43,6 +51,8 @@ public class Cartao {
         this.idAluno = createCartaoDTO.getIdAluno();
         this.numero = createCartaoDTO.getNumero();
         this.dataExp = createCartaoDTO.getDataExp();
+        this.valorLimite = createCartaoDTO.getValorLimite();
+        this.valorConsumido = createCartaoDTO.getValorConsumido();
         this.status = StatusCartao.BLOQUEADO;
     }
 
@@ -84,5 +94,21 @@ public class Cartao {
 
     public void setStatus(StatusCartao status) {
         this.status = status;
+    }
+
+    public Double getValorLimite() {
+        return valorLimite;
+    }
+
+    public void setValorLimite(Double valorLimite) {
+        this.valorLimite = valorLimite;
+    }
+
+    public Double getValorConsumido() {
+        return valorConsumido;
+    }
+
+    public void setValorConsumido(Double valorConsumido) {
+        this.valorConsumido = valorConsumido;
     }
 }

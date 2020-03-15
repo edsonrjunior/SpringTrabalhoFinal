@@ -2,7 +2,6 @@ package br.com.fiap.fiapCard.Cartao.controller;
 
 import br.com.fiap.fiapCard.Cartao.dto.CartaoDTO;
 import br.com.fiap.fiapCard.Cartao.dto.CreateCartaoDTO;
-import br.com.fiap.fiapCard.Cartao.enums.StatusCartao;
 import br.com.fiap.fiapCard.Cartao.service.CartaoService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
@@ -46,9 +45,9 @@ public class CartaoController {
         return CartaoService.ativarCartao(id);
     }
 
-    @ApiOperation(value = "Atualiza o status do cartao")
+    @ApiOperation(value = "Atualiza o status do cartao para BLOQUEADO")
     @PutMapping(value = "{id}/bloquear", produces = "application/json", consumes = "application/json")
-    public CartaoDTO atualizarStatus(@PathVariable Integer id){
+    public CartaoDTO bloquear(@PathVariable Integer id){
         return CartaoService.bloquearCartao(id);
     }
 

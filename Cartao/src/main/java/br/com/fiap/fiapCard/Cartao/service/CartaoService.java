@@ -19,4 +19,6 @@ public interface CartaoService {
 
     CartaoDTO create(CreateCartaoDTO createCartaoDTO);
 
+    CartaoDTO consumirLimite(Integer idCartao, Double valor);
+
 }

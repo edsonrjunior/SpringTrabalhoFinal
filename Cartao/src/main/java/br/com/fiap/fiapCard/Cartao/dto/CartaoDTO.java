@@ -11,6 +11,8 @@ public class CartaoDTO {
     private Integer idAluno;
     private String numero;
     private Date dataExp;
+    private Double valorLimite;
+    private Double valorConsumido;
     private StatusCartao status;
 
     public CartaoDTO() { }
@@ -20,6 +22,8 @@ public class CartaoDTO {
         this.idAluno = createCartaoDTO.getIdAluno();
         this.numero = createCartaoDTO.getNumero();
         this.dataExp = createCartaoDTO.getDataExp();
+        this.valorLimite = createCartaoDTO.getValorLimite();
+        this.valorConsumido = createCartaoDTO.getValorConsumido();
         this.status = StatusCartao.BLOQUEADO;
     }
 
@@ -28,6 +32,8 @@ public class CartaoDTO {
         this.idAluno = cartaoModel.getIdAluno();
         this.numero = cartaoModel.getNumero();
         this.dataExp = cartaoModel.getDataExp();
+        this.valorLimite = cartaoModel.getValorLimite();
+        this.valorConsumido = cartaoModel.getValorConsumido();
         this.status = cartaoModel.getStatus();
     }
 
@@ -69,6 +75,22 @@ public class CartaoDTO {
 
     public void setStatus(StatusCartao status) {
         this.status = status;
+    }
+
+    public Double getValorLimite() {
+        return valorLimite;
+    }
+
+    public void setValorLimite(Double valorLimite) {
+        this.valorLimite = valorLimite;
+    }
+
+    public Double getValorConsumido() {
+        return valorConsumido;
+    }
+
+    public void setValorConsumido(Double valorConsumido) {
+        this.valorConsumido = valorConsumido;
     }
 }
 

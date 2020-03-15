@@ -12,3 +12,4 @@
 - [ ] Criar o readme com as instruções para subir aplicação
 - [ ] Readme deve conter também as justificativas de uso das ferramentas (banco de dados MYSQL, docker, etc.)
 - [ ] Massa simulada de transações (Postman?)
+- [ ] Plus a mais: Controle de usuários com Spring Security?

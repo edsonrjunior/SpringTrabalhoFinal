@@ -4,23 +4,11 @@ networks:
     driver: bridge
 
 services:
-  nginx:
-    restart: always
-    container_name: nginx
-    build: ./NGINX
-    ports:
-      - "80:80"
-    networks:
-      - net
-    depends_on:
-      - aluno
-      - cartao
-
-  aluno-mysql:
-    container_name: aluno-mysql
+  mysql:
+    container_name: mysql
     image: mysql/mysql-server:5.7
     environment:
-      MYSQL_DATABASE: aluno
+      MYSQL_DATABASE: fiapcard
       MYSQL_ROOT_PASSWORD: mysql
       MYSQL_ROOT_HOST: '%'
       MYSQL_USER: mysql
@@ -31,49 +19,18 @@ services:
       - net
     restart: always
 
-  aluno:
+  fiapcard_app:
     restart: always
-    #image: hodestito/fiapcard_aluno
-    build: ./Aluno
+    #image: hodestito/fiapcard_app
+    build: .
     ports:
       - "8080:8080"
     networks:
       - net
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://aluno-mysql:3306/aluno?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/fiapcard?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
       SPRING_DATASOURCE_USERNAME: mysql
       SPRING_DATASOURCE_PASSWORD: mysql123
       SERVER_PORT: 8080
     depends_on:
-      - aluno-mysql
-  
-  cartao-mysql:
-    container_name: cartao-mysql
-    image: mysql/mysql-server:5.7
-    environment:
-      MYSQL_DATABASE: cartao
-      MYSQL_ROOT_PASSWORD: mysql
-      MYSQL_ROOT_HOST: '%'
-      MYSQL_USER: mysql
-      MYSQL_PASSWORD: mysql123
-    ports:
-      - "3307:3306"
-    networks:
-      - net
-    restart: always
-
-  cartao:
-    restart: always
-    #image: hodestito/fiapcard_cartao
-    build: ./Cartao
-    ports:
-      - "8081:8080"
-    networks:
-      - net
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://cartao-mysql:3306/cartao?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
-      SPRING_DATASOURCE_USERNAME: mysql
-      SPRING_DATASOURCE_PASSWORD: mysql123
-      SERVER_PORT: 8080
-    depends_on:
-      - cartao-mysql
+      - mysql

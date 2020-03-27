@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67677566-054c-4aea-bec0-633f96f4b26c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585274504296</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Acerto na imagem do readme">
+      <created>1585274802098</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585274802098</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -153,7 +161,8 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <MESSAGE value="Refatoração da aplicação em um só MS." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refatoração da aplicação em um só MS." />
+    <MESSAGE value="Acerto na imagem do readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Acerto na imagem do readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585242874161">
@@ -180,10 +189,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="570" y="252" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1584281877415" />
-    <state x="489" y="99" key="CommitChangelistDialog2" timestamp="1585274498623">
+    <state x="489" y="99" key="CommitChangelistDialog2" timestamp="1585274798392">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="489" y="99" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1585274498623" />
+    <state x="489" y="99" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1585274798392" />
     <state x="620" y="260" key="FileChooserDialogImpl" timestamp="1585260985606">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -228,10 +237,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="320" y="79" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1585261754091" />
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1585274509405">
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1585274805158">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1585274509405" />
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1585274805158" />
     <state x="536" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1585261734047">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

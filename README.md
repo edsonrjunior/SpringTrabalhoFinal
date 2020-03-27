@@ -23,7 +23,7 @@ Qualquer aluno devidamente matriculado pode solicitar seu cartão.
 
 ## Arquitetura da aplicação
 
-![Arquitetura da aplicação FiapCard] (.\G1_TrabalhoSpring.png)
+![Arquitetura da aplicação FiapCard](G1_TrabalhoSpring.png)
 
 ## Fazer o deploy da aplicação
 

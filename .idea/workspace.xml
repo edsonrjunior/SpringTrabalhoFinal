@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="67677566-054c-4aea-bec0-633f96f4b26c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_ TrabalhoSpring.png" beforeDir="false" afterPath="$PROJECT_DIR$/G1_TrabalhoSpring.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585274802098</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Acerto na imagem do readme">
+      <created>1585274861136</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585274861136</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -189,10 +197,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="570" y="252" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1584281877415" />
-    <state x="489" y="99" key="CommitChangelistDialog2" timestamp="1585274798392">
+    <state x="489" y="99" key="CommitChangelistDialog2" timestamp="1585274857430">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="489" y="99" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1585274798392" />
+    <state x="489" y="99" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1585274857430" />
     <state x="620" y="260" key="FileChooserDialogImpl" timestamp="1585260985606">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

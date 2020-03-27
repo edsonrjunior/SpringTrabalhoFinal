@@ -61,7 +61,7 @@ Link: http://localhost:8080/swagger-ui.html
 
 Para esta aplicação foram escolhidas as seguintes ferramentas:
 
-- **Banco de dados **
+- **Banco de dados**
   - **MYSQL** - É gratuito e leve, mesmo suportando aplicações robustas
   - **H2** - Banco de dados em memória. Utilizado para executar a aplicação em ambiente local para facilitar o desenvolvimento 
 - **Docker** e **Docker-compose** - Facilitam a portabilidade das aplicações possibilitando deploy em diversas plataformas de forma rápida e transparente

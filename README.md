@@ -4,13 +4,13 @@
 - [x] Documentação Swagger para os endpoints já criados 
 - [ ] Carga do arquivo TXT (Spring Batch)
 - [x] Endpoints de Transações
-- [ ] Testes unitários Alunos
-- [ ] Testes unitários Cartões
+- [x] Testes unitários Alunos
+- [ ] Testes unitários Cartões (Em andamento)
 - [ ] Testes unitários Transações
 - [ ] Testes integrados
 - [x] Criar o readme com as instruções para subir aplicação
 - [x] Readme deve conter também as justificativas de uso das ferramentas (banco de dados MYSQL, docker, etc.)
-- [ ] Massa simulada de transações (Postman)
+- [ ] Massa simulada de transações (Postman) (Em andamento)
 - [ ] Plus a mais: Controle de usuários com Spring Security
 
 

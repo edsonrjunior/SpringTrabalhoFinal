@@ -34,6 +34,7 @@ public class CartaoServiceImpl implements CartaoService {
         List<Cartao> cartaoList = cartaoRepository.findAll();
         return cartaoList
                 .stream()
+                .peek(x -> verificaExp(x))
                 .map(CartaoDTO::new)
                 .collect(Collectors.toList());
     }
@@ -41,6 +42,7 @@ public class CartaoServiceImpl implements CartaoService {
     @Override
     public CartaoDTO findById(Integer id) {
         Cartao cartao = getCartaoById(id);
+        cartao = verificaExp(cartao);
         return new CartaoDTO(cartao);
     }
 
@@ -48,6 +50,7 @@ public class CartaoServiceImpl implements CartaoService {
     public CartaoDTO ativarCartao(Integer id) {
         Cartao cartao = getCartaoById(id);
         cartao.setStatus(StatusCartao.ATIVO);
+        cartao = verificaExp(cartao);
         return new CartaoDTO(cartaoRepository.save(cartao));
     }
 
@@ -79,7 +82,15 @@ public class CartaoServiceImpl implements CartaoService {
 
     @Override
     public CartaoDTO consumirLimite(Integer idCartao, Double valor) {
+
         Cartao cartao = getCartaoById(idCartao);
+
+        //Validar se cartao está apto para receber transações
+        cartao = verificaExp(cartao);
+
+        if (cartao.getStatus() != StatusCartao.ATIVO) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Cartao precisar estar ativo! Status atual = " + cartao.getStatus());
+        }
 
         if (cartao.getValorLimite() < cartao.getValorConsumido() + valor){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Transacao excede o valor limite do cartao");
@@ -93,5 +104,15 @@ public class CartaoServiceImpl implements CartaoService {
     private Cartao getCartaoById(Integer id) {
         return cartaoRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cartao id = '" + id + "' nao encontrado."));
+    }
+
+    private Cartao verificaExp(Cartao cartao){
+        Date hoje = new Date(System.currentTimeMillis());
+
+        if (cartao.getDataExp().compareTo(hoje) < 0) {
+            cartao.setStatus(StatusCartao.EXPIRADO);
+        }
+
+        return cartao;
     }
 }

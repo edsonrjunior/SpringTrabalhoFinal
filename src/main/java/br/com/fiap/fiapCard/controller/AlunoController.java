@@ -48,6 +48,7 @@ public class AlunoController {
 
     @ApiOperation(value = "Apaga um aluno")
     @DeleteMapping(value = "{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable Integer id){
         alunoService.delete(id);
     }

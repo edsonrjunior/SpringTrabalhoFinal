@@ -10,6 +10,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -24,13 +25,22 @@ public class CartaoRepositoryTest {
     @Autowired
     private CartaoRepository cartaoRepository;
 
+    private Aluno aluno;
+    private Cartao cartao;
+    private Calendar calendar;
+    private Date dataExp;
+
     public CartaoRepositoryTest() {
     }
 
     @Test
     public void whenFindByNumero_thenReturnCartao(){
-        Aluno aluno = new Aluno(123456, "Aluno Teste");
-        Cartao cartao = new Cartao(aluno, "123456", new Date(2020-12-01), 1000.0, 0.0, StatusCartao.BLOQUEADO);
+        calendar = Calendar.getInstance();
+        calendar.set(2020,12,01);
+        dataExp = calendar.getTime();
+
+        aluno = new Aluno(123456, "Cartao Teste");
+        cartao = new Cartao(aluno, "123456", dataExp,1000.0, 0.0, StatusCartao.BLOQUEADO);
 
         testEntityManager.persist(aluno);
         testEntityManager.persist(cartao);

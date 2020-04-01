@@ -2,50 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67677566-054c-4aea-bec0-633f96f4b26c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/controller/AlunoControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/controller/CartaoControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/repository/AlunoRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/repository/CartaoRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/AlunoServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/CartaoServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/Cartao/CartaoApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/Cartao/dto/CartaoDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/Cartao/dto/CreateCartaoDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/Cartao/enums/StatusCartao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/Cartao/model/Cartao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/Cartao/repository/CartaoRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/Cartao/service/CartaoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/Cartao/service/CartaoServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/Cartao/CartaoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/Cartao/CartaoApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/Cartao/CartaoApplicationTests.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/CartaoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/FiapCardApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/config/configSwagger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/config/configSwagger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/controller/AlunoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/controller/AlunoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/controller/CartaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/controller/CartaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/controller/TransacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/controller/TransacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/dto/AlunoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/dto/AlunoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/dto/CartaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/dto/CartaoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/dto/CreateAlunoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/dto/CreateAlunoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/dto/CreateCartaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/dto/CreateCartaoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/dto/CreateTransacaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/dto/CreateTransacaoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/dto/TransacaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/dto/TransacaoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/enums/StatusCartao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/enums/StatusCartao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/model/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/model/Aluno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/model/Cartao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/model/Cartao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/model/Transacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/model/Transacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/repository/AlunoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/repository/AlunoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/repository/CartaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/repository/CartaoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/repository/TransacaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/repository/TransacaoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/service/AlunoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/AlunoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/service/CartaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/CartaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/service/Impl/AlunoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/Impl/AlunoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/service/Impl/CartaoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/Impl/CartaoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/service/Impl/TransacaoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/Impl/TransacaoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/Cartao/service/TransacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/TransacaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/Cartao/CartaoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/FiapCardApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/controller/AlunoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/controller/AlunoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/dto/AlunoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/dto/AlunoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/dto/CartaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/dto/CartaoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/dto/TransacaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/dto/TransacaoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/Impl/CartaoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/Impl/CartaoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/Impl/TransacaoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/Impl/TransacaoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/controller/AlunoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/controller/AlunoControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/controller/CartaoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/controller/CartaoControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/repository/CartaoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/repository/CartaoRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/CartaoServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/CartaoServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,13 +87,13 @@
       <recent name="D:\Hugo\git\SpringTrabalhoFinal\Cartao\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CartaoControllerTest">
-    <configuration name="AlunoRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CartaoServiceImplTest">
+    <configuration name="AlunoControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;br.com.fiap.fiapCard.repository.AlunoRepositoryTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;br.com.fiap.fiapCard.controller.AlunoControllerTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -138,12 +108,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AlunoServiceImplTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AlunoControllerTest.whenCreate_AlunoCreated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;br.com.fiap.fiapCard.service.AlunoServiceImplTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;br.com.fiap.fiapCard.controller.AlunoControllerTest.whenCreate_AlunoCreated&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -198,6 +168,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="CartaoServiceImplTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;br.com.fiap.fiapCard.service.CartaoServiceImplTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="FiapCard [bootRun]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -215,26 +205,6 @@
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="FiapCardApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
@@ -259,19 +229,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.FiapCard [bootRun]" />
-      <item itemvalue="Gradle.AlunoServiceImplTest" />
-      <item itemvalue="Gradle.FiapCardApplicationTests" />
       <item itemvalue="Gradle.CartaoRepositoryTest" />
-      <item itemvalue="Gradle.AlunoRepositoryTest" />
       <item itemvalue="Gradle.CartaoControllerTest" />
+      <item itemvalue="Gradle.AlunoControllerTest.whenCreate_AlunoCreated" />
+      <item itemvalue="Gradle.AlunoControllerTest" />
+      <item itemvalue="Gradle.CartaoServiceImplTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CartaoControllerTest" />
-        <item itemvalue="Gradle.AlunoServiceImplTest" />
+        <item itemvalue="Gradle.CartaoServiceImplTest" />
         <item itemvalue="Gradle.CartaoRepositoryTest" />
-        <item itemvalue="Gradle.AlunoRepositoryTest" />
-        <item itemvalue="Gradle.FiapCardApplicationTests" />
+        <item itemvalue="Gradle.CartaoControllerTest" />
+        <item itemvalue="Gradle.AlunoControllerTest" />
+        <item itemvalue="Gradle.AlunoControllerTest.whenCreate_AlunoCreated" />
       </list>
     </recent_temporary>
   </component>
@@ -341,6 +311,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="573" y="194" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1584236366021" />
+    <state x="520" y="241" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585763518697">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="520" y="241" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1585763518697" />
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585520538944">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -349,62 +323,66 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="570" y="252" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1584281877415" />
-    <state x="489" y="99" key="CommitChangelistDialog2" timestamp="1585274857430">
+    <state x="489" y="99" key="CommitChangelistDialog2" timestamp="1585785256126">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="489" y="99" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1585274857430" />
-    <state x="620" y="260" key="FileChooserDialogImpl" timestamp="1585401107902">
+    <state x="489" y="99" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1585785256126" />
+    <state x="620" y="260" key="FileChooserDialogImpl" timestamp="1585677078683">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="620" y="260" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1585401107902" />
+    <state x="620" y="260" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1585677078683" />
     <state x="446" y="307" key="FileDocumentManager.FileCacheConflict" timestamp="1584234425299">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="446" y="307" key="FileDocumentManager.FileCacheConflict/0.0.1680.1010@0.0.1680.1010" timestamp="1584234425299" />
-    <state width="1637" height="324" key="GridCell.Tab.0.bottom" timestamp="1585576638083">
+    <state width="1637" height="316" key="GridCell.Tab.0.bottom" timestamp="1585785186397">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="324" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1585576638083" />
-    <state width="1637" height="324" key="GridCell.Tab.0.center" timestamp="1585576638083">
+    <state width="1637" height="316" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1585785186397" />
+    <state width="1637" height="316" key="GridCell.Tab.0.center" timestamp="1585785186396">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="324" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1585576638083" />
-    <state width="1637" height="324" key="GridCell.Tab.0.left" timestamp="1585576638083">
+    <state width="1637" height="316" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1585785186396" />
+    <state width="1637" height="316" key="GridCell.Tab.0.left" timestamp="1585785186396">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="324" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1585576638083" />
-    <state width="1637" height="324" key="GridCell.Tab.0.right" timestamp="1585576638083">
+    <state width="1637" height="316" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1585785186396" />
+    <state width="1637" height="316" key="GridCell.Tab.0.right" timestamp="1585785186396">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="324" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1585576638083" />
-    <state width="1637" height="354" key="GridCell.Tab.1.bottom" timestamp="1585566973740">
+    <state width="1637" height="316" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1585785186396" />
+    <state width="1637" height="354" key="GridCell.Tab.1.bottom" timestamp="1585763525299">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="354" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1585566973740" />
-    <state width="1637" height="354" key="GridCell.Tab.1.center" timestamp="1585566973740">
+    <state width="1637" height="354" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1585763525299" />
+    <state width="1637" height="354" key="GridCell.Tab.1.center" timestamp="1585763525299">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="354" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1585566973740" />
-    <state width="1637" height="354" key="GridCell.Tab.1.left" timestamp="1585566973740">
+    <state width="1637" height="354" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1585763525299" />
+    <state width="1637" height="354" key="GridCell.Tab.1.left" timestamp="1585763525299">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="354" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1585566973740" />
-    <state width="1637" height="354" key="GridCell.Tab.1.right" timestamp="1585566973740">
+    <state width="1637" height="354" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1585763525299" />
+    <state width="1637" height="354" key="GridCell.Tab.1.right" timestamp="1585763525299">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="354" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1585566973740" />
+    <state width="1637" height="354" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1585763525299" />
+    <state x="607" y="216" key="RollbackChangesDialog" timestamp="1585751511697">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="607" y="216" key="RollbackChangesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1585751511697" />
     <state x="320" y="79" key="SettingsEditor" timestamp="1585261754091">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="320" y="79" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1585261754091" />
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1585274805158">
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1585785267890">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1585274805158" />
-    <state x="536" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1585401080975">
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1585785267890" />
+    <state x="536" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1585784910991">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="536" y="329" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1585401080975" />
+    <state x="536" y="329" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1585784910991" />
     <state x="544" y="398" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585515415812">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

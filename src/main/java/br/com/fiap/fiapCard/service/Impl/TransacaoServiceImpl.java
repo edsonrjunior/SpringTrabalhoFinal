@@ -96,7 +96,7 @@ public class TransacaoServiceImpl implements TransacaoService {
 
     @Override
     public TransacaoDTO create(CreateTransacaoDTO createTransacaoDTO) {
-        Date hoje = new Date(System.currentTimeMillis());
+
         Transacao transacao = new Transacao(createTransacaoDTO);
 
         String numeroCartao = createTransacaoDTO.getNumeroCartao();
@@ -105,14 +105,6 @@ public class TransacaoServiceImpl implements TransacaoService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Cartao numero " + numeroCartao + " nao encontrado!"));
 
         transacao.setCartao(cartao);
-
-        //Validar se cartao está apto para receber transações
-        if (transacao.getCartao().getDataExp().compareTo(hoje) < 0) {
-            transacao.getCartao().setStatus(StatusCartao.EXPIRADO);
-        }
-        if (transacao.getCartao().getStatus() != StatusCartao.ATIVO) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Cartao nao esta ativo! Status = " + transacao.getCartao().getStatus());
-        }
 
         //Consumir limite do cartão
         cartaoService.consumirLimite(transacao.getCartao().getId(), transacao.getValor());

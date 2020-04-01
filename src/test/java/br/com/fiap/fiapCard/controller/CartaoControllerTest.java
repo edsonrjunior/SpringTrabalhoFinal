@@ -42,19 +42,10 @@ public class CartaoControllerTest {
     @MockBean
     private CartaoService cartaoService;
 
-    @MockBean
     private Aluno aluno;
-
-    @MockBean
     private Cartao cartao;
-
-    @MockBean
     private CartaoDTO cartaoDTO;
-
-    @MockBean
     private CreateCartaoDTO createCartaoDTO;
-
-    @MockBean
     private List<CartaoDTO> listCartoes;
 
     private Calendar calendar;

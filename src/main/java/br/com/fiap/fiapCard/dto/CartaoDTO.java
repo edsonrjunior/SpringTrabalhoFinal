@@ -3,9 +3,10 @@ package br.com.fiap.fiapCard.dto;
 import br.com.fiap.fiapCard.enums.StatusCartao;
 import br.com.fiap.fiapCard.model.Cartao;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class CartaoDTO {
+public class CartaoDTO implements Serializable {
 
     private Integer id;
 

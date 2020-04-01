@@ -2,9 +2,10 @@ package br.com.fiap.fiapCard.dto;
 
 import br.com.fiap.fiapCard.model.Transacao;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TransacaoDTO {
+public class TransacaoDTO implements Serializable {
 
     private Integer id;
     private String numeroCartao;

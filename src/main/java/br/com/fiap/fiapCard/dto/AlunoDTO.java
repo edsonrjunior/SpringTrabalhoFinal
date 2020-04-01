@@ -2,7 +2,9 @@ package br.com.fiap.fiapCard.dto;
 
 import br.com.fiap.fiapCard.model.Aluno;
 
-public class AlunoDTO {
+import java.io.Serializable;
+
+public class AlunoDTO implements Serializable {
 
     private Integer id;
     private Integer matricula;

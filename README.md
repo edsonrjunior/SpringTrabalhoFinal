@@ -5,8 +5,8 @@
 - [ ] Carga do arquivo TXT (Spring Batch)
 - [x] Endpoints de Transações
 - [x] Testes unitários Alunos
-- [ ] Testes unitários Cartões (Em andamento)
-- [ ] Testes unitários Transações
+- [x] Testes unitários Cartões
+- [ ] Testes unitários Transações (Em andamento)
 - [ ] Testes integrados
 - [x] Criar o readme com as instruções para subir aplicação
 - [x] Readme deve conter também as justificativas de uso das ferramentas (banco de dados MYSQL, docker, etc.)

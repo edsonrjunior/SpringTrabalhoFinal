@@ -13,6 +13,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -32,7 +34,7 @@ public class TransacaoServiceImpl implements TransacaoService {
     }
 
     @Override
-    public List<TransacaoDTO> findAllByAlunoOuCartao(Integer idAluno, String numeroCartao, Date dataIni, Date dataFim) {
+    public List<TransacaoDTO> findAllByAlunoOuCartao(Integer idAluno, String numeroCartao, String dataIniS, String dataFimS) {
 
         List<Transacao> transacaoList;
 
@@ -42,11 +44,14 @@ public class TransacaoServiceImpl implements TransacaoService {
 
         Date dataFimMaisUm = null;
 
+        Date dataIni = StringToDate(dataIniS);
+        Date dataFim = StringToDate(dataFimS);
+
         //Verifica quais variaveis estao preenchidas
         if (idAluno != null) buscaAluno = true;
         if (numeroCartao != null) buscaCartao = true;
 
-        if (!buscaAluno && !buscaCartao) throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Preencher idAluno, numeroCartao ou ambos");
+        if (!buscaAluno && !buscaCartao) throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Preencher idAluno, numeroCartao ou ambos.");
 
         if (dataIni != null && dataFim != null) {
             buscaDatas = true;
@@ -56,9 +61,21 @@ public class TransacaoServiceImpl implements TransacaoService {
             dataFimMaisUm = c.getTime();
         } else {
             if (dataIni != null || dataFim != null) {
-                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Os campos dataIni e dataFim devem estar preenchidos");
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Os campos dataIni e dataFim devem estar preenchidos em buscas por datas!");
             }
         }
+
+        // Dependendo das variáveis preenchidas, faz uma busca diferente no repositorio
+        /*
+        * buscaAluno   buscaCartao  buscaDatas
+        *      x            x            x        -  findAllByAlunoCartaoDateRange
+        *      x            x                     -  findAllByAlunoCartao
+        *      x                                  -  findAllByidAluno
+        *                   x                     -  findAllByNumeroCartao
+        *      x                         x        -  findAllByAlunoDateRange
+        *                   x            x        -  findAllByCartaoDateRange
+        * */
+
 
         if (buscaAluno && buscaCartao && buscaDatas) {
             transacaoList = transacaoRepository.findAllByAlunoCartaoDateRange(idAluno, numeroCartao, dataIni, dataFimMaisUm);
@@ -73,7 +90,7 @@ public class TransacaoServiceImpl implements TransacaoService {
                         transacaoList = transacaoRepository.findAllByNumeroCartao(numeroCartao);
                     }
                 } else {
-                    if (buscaAluno && buscaDatas) {
+                    if (buscaAluno) {
                         transacaoList = transacaoRepository.findAllByAlunoDateRange(idAluno, dataIni, dataFimMaisUm);
                     } else {
                         transacaoList = transacaoRepository.findAllByCartaoDateRange(numeroCartao, dataIni, dataFimMaisUm);
@@ -114,5 +131,14 @@ public class TransacaoServiceImpl implements TransacaoService {
     private Transacao getTransacaoById(Integer id) {
         return transacaoRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+    }
+
+    private Date StringToDate(String data) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            return simpleDateFormat.parse(data);
+        } catch (ParseException e){
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Formato de data invalida! Formato aceito: yyyy-MM-dd");
+        }
     }
 }

@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface TransacaoService {
 
-    List<TransacaoDTO> findAllByAlunoOuCartao (Integer idAluno, String numeroCartao, Date dataIni, Date dataFim);
+    List<TransacaoDTO> findAllByAlunoOuCartao (Integer idAluno, String numeroCartao, String dataIni, String dataFim);
 
     TransacaoDTO findById(Integer id);
 

@@ -27,9 +27,9 @@ public class TransacaoController {
     public List<TransacaoDTO> getAll(@RequestParam(required = false, value = "idAluno") Integer idAluno,
                                      @RequestParam(required = false, value = "numeroCartao") String numeroCartao,
                                      @RequestParam (required = false, value = "dataIni")
-                                        @DateTimeFormat(pattern="yyyy-MM-dd") Date dataIni,
+                                        @DateTimeFormat(pattern="yyyy-MM-dd") String dataIni,
                                      @RequestParam(required = false, value = "dataFim")
-                                         @DateTimeFormat(pattern="yyyy-MM-dd") Date dataFim){
+                                         @DateTimeFormat(pattern="yyyy-MM-dd") String dataFim){
         return transacaoService.findAllByAlunoOuCartao(idAluno, numeroCartao, dataIni, dataFim);
     }
 

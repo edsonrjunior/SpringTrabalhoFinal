@@ -53,7 +53,6 @@ public class CartaoServiceImplTest {
         }
     }
 
-
     @Before
     public void setUp() {
 

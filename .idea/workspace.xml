@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="67677566-054c-4aea-bec0-633f96f4b26c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/CartaoServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/CartaoServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/TransacaoServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/TransacaoServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +22,12 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -53,7 +59,15 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -75,53 +89,13 @@
       <recent name="br.com.fiap.fiapCard.Cartao.enum" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TransacaoServiceImplTest">
-    <configuration name="AlunoControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Tests in 'FiapCard.test'">
+    <configuration name="CartaoServiceImplTest.whenfindAll_thenCartaoFound" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;br.com.fiap.fiapCard.controller.AlunoControllerTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CartaoControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;br.com.fiap.fiapCard.controller.CartaoControllerTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CartaoRepositoryTest.whenFindByNumero_thenReturnCartao" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;br.com.fiap.fiapCard.repository.CartaoRepositoryTest.whenFindByNumero_thenReturnCartao&quot;" />
+        <option name="scriptParameters" value="--tests &quot;br.com.fiap.fiapCard.service.CartaoServiceImplTest.whenfindAll_thenCartaoFound&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -155,12 +129,12 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TransacaoRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'FiapCard.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;br.com.fiap.fiapCard.repository.TransacaoRepositoryTest&quot;" />
+        <option name="scriptParameters" value="--tests *" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -195,6 +169,46 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="TransacaoServiceImplTest.whenfindAllByAlunoOuCartao_Aluno" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;br.com.fiap.fiapCard.service.TransacaoServiceImplTest.whenfindAllByAlunoOuCartao_Aluno&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TransacaoServiceImplTest.whenfindAllByAlunoOuCartao_AlunoCartaoDatas" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;br.com.fiap.fiapCard.service.TransacaoServiceImplTest.whenfindAllByAlunoOuCartao_AlunoCartaoDatas&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -215,23 +229,34 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="FiapCardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="FiapCard.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.fiap.fiapCard.FiapCardApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Gradle.FiapCard [bootRun]" />
-      <item itemvalue="Gradle.CartaoControllerTest" />
-      <item itemvalue="Gradle.AlunoControllerTest" />
-      <item itemvalue="Gradle.CartaoRepositoryTest.whenFindByNumero_thenReturnCartao" />
-      <item itemvalue="Gradle.TransacaoRepositoryTest" />
       <item itemvalue="Gradle.TransacaoServiceImplTest" />
+      <item itemvalue="Spring Boot.FiapCardApplication" />
+      <item itemvalue="Gradle.Tests in 'FiapCard.test'" />
+      <item itemvalue="Gradle.TransacaoServiceImplTest.whenfindAllByAlunoOuCartao_Aluno" />
+      <item itemvalue="Gradle.CartaoServiceImplTest.whenfindAll_thenCartaoFound" />
+      <item itemvalue="Gradle.TransacaoServiceImplTest.whenfindAllByAlunoOuCartao_AlunoCartaoDatas" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'FiapCard.test'" />
+        <item itemvalue="Gradle.TransacaoServiceImplTest.whenfindAllByAlunoOuCartao_AlunoCartaoDatas" />
+        <item itemvalue="Gradle.CartaoServiceImplTest.whenfindAll_thenCartaoFound" />
+        <item itemvalue="Gradle.TransacaoServiceImplTest.whenfindAllByAlunoOuCartao_Aluno" />
         <item itemvalue="Gradle.TransacaoServiceImplTest" />
-        <item itemvalue="Gradle.TransacaoRepositoryTest" />
-        <item itemvalue="Gradle.CartaoRepositoryTest.whenFindByNumero_thenReturnCartao" />
-        <item itemvalue="Gradle.AlunoControllerTest" />
-        <item itemvalue="Gradle.CartaoControllerTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -240,6 +265,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584232287626</updated>
+      <workItem from="1586093426565" duration="487000" />
+      <workItem from="1586116653677" duration="5248000" />
     </task>
     <task id="LOCAL-00001" summary="Refatoração da aplicação em um só MS.">
       <created>1585274504296</created>
@@ -271,6 +298,9 @@
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -335,38 +365,54 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="446" y="307" key="FileDocumentManager.FileCacheConflict/0.0.1680.1010@0.0.1680.1010" timestamp="1584234425299" />
-    <state width="1637" height="316" key="GridCell.Tab.0.bottom" timestamp="1586057817575">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="2518" height="337" key="GridCell.Tab.0.bottom" timestamp="1586122438791">
+      <screen x="1440" y="23" width="2560" height="1057" />
     </state>
     <state width="1637" height="316" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1586057817575" />
-    <state width="1637" height="316" key="GridCell.Tab.0.center" timestamp="1586057817575">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="2518" height="337" key="GridCell.Tab.0.bottom/0.23.1440.826/1440.23.2560.1057@1440.23.2560.1057" timestamp="1586122438791" />
+    <state width="2518" height="337" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.2560.1006@1440.23.2560.1006" timestamp="1586120153747" />
+    <state width="2518" height="337" key="GridCell.Tab.0.center" timestamp="1586122438790">
+      <screen x="1440" y="23" width="2560" height="1057" />
     </state>
     <state width="1637" height="316" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1586057817575" />
-    <state width="1637" height="316" key="GridCell.Tab.0.left" timestamp="1586057817575">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="2518" height="337" key="GridCell.Tab.0.center/0.23.1440.826/1440.23.2560.1057@1440.23.2560.1057" timestamp="1586122438790" />
+    <state width="2518" height="337" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.2560.1006@1440.23.2560.1006" timestamp="1586120153743" />
+    <state width="2518" height="337" key="GridCell.Tab.0.left" timestamp="1586122438790">
+      <screen x="1440" y="23" width="2560" height="1057" />
     </state>
     <state width="1637" height="316" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1586057817575" />
-    <state width="1637" height="316" key="GridCell.Tab.0.right" timestamp="1586057817575">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="2518" height="337" key="GridCell.Tab.0.left/0.23.1440.826/1440.23.2560.1057@1440.23.2560.1057" timestamp="1586122438790" />
+    <state width="2518" height="337" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.2560.1006@1440.23.2560.1006" timestamp="1586120153741" />
+    <state width="2518" height="337" key="GridCell.Tab.0.right" timestamp="1586122438791">
+      <screen x="1440" y="23" width="2560" height="1057" />
     </state>
     <state width="1637" height="316" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1586057817575" />
-    <state width="1637" height="354" key="GridCell.Tab.1.bottom" timestamp="1585763525299">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="2518" height="337" key="GridCell.Tab.0.right/0.23.1440.826/1440.23.2560.1057@1440.23.2560.1057" timestamp="1586122438791" />
+    <state width="2518" height="337" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.2560.1006@1440.23.2560.1006" timestamp="1586120153745" />
+    <state width="2518" height="337" key="GridCell.Tab.1.bottom" timestamp="1586122438793">
+      <screen x="1440" y="23" width="2560" height="1057" />
     </state>
     <state width="1637" height="354" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1585763525299" />
-    <state width="1637" height="354" key="GridCell.Tab.1.center" timestamp="1585763525299">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="2518" height="337" key="GridCell.Tab.1.bottom/0.23.1440.826/1440.23.2560.1057@1440.23.2560.1057" timestamp="1586122438793" />
+    <state width="2518" height="337" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.2560.1006@1440.23.2560.1006" timestamp="1586120153352" />
+    <state width="2518" height="337" key="GridCell.Tab.1.center" timestamp="1586122438792">
+      <screen x="1440" y="23" width="2560" height="1057" />
     </state>
     <state width="1637" height="354" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1585763525299" />
-    <state width="1637" height="354" key="GridCell.Tab.1.left" timestamp="1585763525299">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="2518" height="337" key="GridCell.Tab.1.center/0.23.1440.826/1440.23.2560.1057@1440.23.2560.1057" timestamp="1586122438792" />
+    <state width="2518" height="337" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.2560.1006@1440.23.2560.1006" timestamp="1586120153349" />
+    <state width="2518" height="337" key="GridCell.Tab.1.left" timestamp="1586122438792">
+      <screen x="1440" y="23" width="2560" height="1057" />
     </state>
     <state width="1637" height="354" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1585763525299" />
-    <state width="1637" height="354" key="GridCell.Tab.1.right" timestamp="1585763525299">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="2518" height="337" key="GridCell.Tab.1.left/0.23.1440.826/1440.23.2560.1057@1440.23.2560.1057" timestamp="1586122438792" />
+    <state width="2518" height="337" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.2560.1006@1440.23.2560.1006" timestamp="1586120153348" />
+    <state width="2518" height="337" key="GridCell.Tab.1.right" timestamp="1586122438793">
+      <screen x="1440" y="23" width="2560" height="1057" />
     </state>
     <state width="1637" height="354" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1585763525299" />
+    <state width="2518" height="337" key="GridCell.Tab.1.right/0.23.1440.826/1440.23.2560.1057@1440.23.2560.1057" timestamp="1586122438793" />
+    <state width="2518" height="337" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.2560.1006@1440.23.2560.1006" timestamp="1586120153350" />
     <state x="607" y="216" key="RollbackChangesDialog" timestamp="1585751511697">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -379,10 +425,11 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1585785267890" />
-    <state x="536" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1586055079601">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state x="459" y="292" key="com.intellij.ide.util.TipDialog" timestamp="1586116776830">
+      <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="536" y="329" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1586055079601" />
+    <state x="459" y="292" key="com.intellij.ide.util.TipDialog/0.23.1440.826/1440.23.2560.1057@1440.23.2560.1057" timestamp="1586116776830" />
     <state x="544" y="398" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585515415812">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -399,5 +446,34 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="503" y="217" width="672" height="678" key="search.everywhere.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1585519510461" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/Impl/TransacaoServiceImpl.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/Impl/CartaoServiceImpl.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/service/Impl/TransacaoServiceImpl.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/TransacaoServiceImplTest.java</url>
+          <line>146</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FiapCard$Tests_in__FiapCard_test_.ic" NAME="Tests in 'FiapCard.test' Coverage Results" MODIFIED="1586116956784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

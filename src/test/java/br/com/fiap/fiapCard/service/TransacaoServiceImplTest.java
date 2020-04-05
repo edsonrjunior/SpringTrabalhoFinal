@@ -1,5 +1,8 @@
 package br.com.fiap.fiapCard.service;
 
+import br.com.fiap.fiapCard.dto.CartaoDTO;
+import br.com.fiap.fiapCard.dto.CreateCartaoDTO;
+import br.com.fiap.fiapCard.dto.CreateTransacaoDTO;
 import br.com.fiap.fiapCard.dto.TransacaoDTO;
 import br.com.fiap.fiapCard.enums.StatusCartao;
 import br.com.fiap.fiapCard.model.Aluno;
@@ -13,6 +16,7 @@ import br.com.fiap.fiapCard.service.Impl.TransacaoServiceImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
@@ -20,10 +24,10 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
+
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 public class TransacaoServiceImplTest {
@@ -51,12 +55,18 @@ public class TransacaoServiceImplTest {
     private Date dataTransacao2;
     private Date dataTransacao3;
 
+    private Date dataTransacao1t;
+    private Date dataTransacao2t;
+
     List<TransacaoDTO> listTransacoes;
 
     private Calendar calendar;
     private String dataIni;
     private String dataFim;
     private Date dataExp;
+    private CreateTransacaoDTO createTransacaoDTO;
+
+    Optional<Transacao> optionalTransacao = Optional.of(transacao1);
 
     @TestConfiguration
     static class AlunoServiceImplTestContextConfiguration {
@@ -83,6 +93,12 @@ public class TransacaoServiceImplTest {
         calendar.set(2025,12,30);
         dataExp = calendar.getTime();
 
+        calendar.set(2020, 02, 10, 00, 00, 00);
+        dataTransacao1t = calendar.getTime();
+
+        calendar.set(2020, 04, 31, 00, 00, 00);
+        dataTransacao2t = calendar.getTime();
+
         aluno = new Aluno(1, 123456, "Cartao Teste");
         cartao = new Cartao(1, aluno, "123456", dataExp,1000.0, 0.0, StatusCartao.BLOQUEADO);
         transacao1 = new Transacao(1, cartao, dataTransacao1, 100.0, "Padaria Teste");
@@ -95,38 +111,54 @@ public class TransacaoServiceImplTest {
 
     @Test
     public void whenfindAllByAlunoOuCartao_Aluno(){
-        Assert.assertEquals("1", "1");
+        List<TransacaoDTO> found = transacaoService.findAllByAlunoOuCartao(1, null, null, null);
+        Assertions.assertEquals(transacao1.getId(), found.get(0).getId());
     }
 
     @Test
     public void whenfindAllByAlunoOuCartao_Cartao(){
-        Assert.assertEquals("1", "1");
+        List<TransacaoDTO> found = transacaoService.findAllByAlunoOuCartao(null, "123456", null, null);
+        Assertions.assertEquals(transacao1.getId(), found.get(0).getId());
     }
 
     @Test
     public void whenfindAllByAlunoOuCartao_AlunoCartao(){
-        Assert.assertEquals("1", "1");
+        when(transacaoRepository.findAllByAlunoCartaoDateRange(1, "123456", null, null)).thenReturn(Arrays.asList(transacao1, transacao2, transacao3));
+        List<TransacaoDTO> found = transacaoService.findAllByAlunoOuCartao(1, "123456", null, null);
+        Assertions.assertEquals(transacao1.getId(), found.get(0).getId());
     }
 
     @Test
     public void whenfindAllByAlunoOuCartao_AlunoDatas(){
-        Assert.assertEquals("1", "1");
+        when(transacaoRepository.findAllByAlunoCartaoDateRange(1, null, dataTransacao1t, dataTransacao2t)).thenReturn(Arrays.asList(transacao1, transacao2, transacao3));
+        List<TransacaoDTO> found = transacaoService.findAllByAlunoOuCartao(1, null, "2020-01-01", "2020-04-06");
+        Assertions.assertEquals(transacao1.getId(), found.get(0).getId());
     }
 
     @Test
     public void whenfindAllByAlunoOuCartao_CartaoDatas(){
-        Assert.assertEquals("1", "1");
+        when(transacaoRepository.findAllByAlunoCartaoDateRange(null, "123456", dataTransacao1t, dataTransacao2t)).thenReturn(Arrays.asList(transacao1, transacao2, transacao3));
+        List<TransacaoDTO> found = transacaoService.findAllByAlunoOuCartao(null, "123456", "2020-01-01", "2020-04-06");
+        Assertions.assertEquals(transacao1.getId(), found.get(0).getId());
     }
 
     @Test
     public void whenfindAllByAlunoOuCartao_AlunoCartaoDatas(){
-        Assert.assertEquals("1", "1");
+        when(transacaoRepository.findAllByAlunoCartaoDateRange(1, "123456", dataTransacao1t, dataTransacao2t)).thenReturn(Arrays.asList(transacao1, transacao2, transacao3));
+        List<TransacaoDTO> found = transacaoService.findAllByAlunoOuCartao(1, "123456", "2020-03-10", "2020-05-30");
+        Assertions.assertEquals(transacao1.getId(), found.get(0).getId());
     }
 
-    /*
-    * findAllByAlunoOuCartao
-    * findById
-    * create
-    * */
+    @Test
+    public void whenfindById() {
+        when(transacaoRepository.findById(1)).thenReturn(optionalTransacao);
+        TransacaoDTO transacao = transacaoService.findById(1);
+        Assertions.assertEquals(optionalTransacao.get().getId(), transacao.getId());
+    }
 
+    public void whencreate_thenTransacaoCreated() {
+        TransacaoDTO created = transacaoService.create(createTransacaoDTO);
+
+        Assertions.assertEquals(created.getId(), transacao1.getId());
+    }
 }

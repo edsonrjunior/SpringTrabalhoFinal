@@ -1,6 +1,5 @@
 package br.com.fiap.fiapCard.controller;
 
-import br.com.fiap.fiapCard.dto.CreateCartaoDTO;
 import br.com.fiap.fiapCard.dto.TransacaoDTO;
 import br.com.fiap.fiapCard.dto.CreateTransacaoDTO;
 import br.com.fiap.fiapCard.enums.StatusCartao;
@@ -12,7 +11,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentMatchers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -25,9 +23,6 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.*;
 
 import static org.hamcrest.Matchers.*;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -91,8 +86,8 @@ public class TransacaoControllerTest {
     @Test
     public void whenGetAll_AlunoCartaoData() throws Exception {
 
-        given(transacaoService.findAllByAlunoOuCartao(1, "123456", "2020-01-01", "2020-12-30"))
-                .willReturn(listTransacoes);
+        when(transacaoService.findAllByAlunoOuCartao(1, "123456", "2020-01-01", "2020-12-30"))
+                .thenReturn(listTransacoes);
 
         mvc.perform(get("/transacoes?idAluno={idAluno}&numeroCartao={numeroCartao}&dataIni={dataIni}&dataFim={dataFim}", 1, "123456", "2020-01-01", "2020-12-30"))
             .andExpect(status().isOk())
@@ -105,8 +100,8 @@ public class TransacaoControllerTest {
     @Test
     public void whenGetAll_AlunoCartao() throws Exception {
 
-        given(transacaoService.findAllByAlunoOuCartao(1, "123456", null, null))
-                .willReturn(listTransacoes);
+        when(transacaoService.findAllByAlunoOuCartao(1, "123456", null, null))
+                .thenReturn(listTransacoes);
 
         mvc.perform(get("/transacoes?idAluno={idAluno}&numeroCartao={numcartao}", 1, "123456")
                 .contentType(MediaType.APPLICATION_JSON))
@@ -120,8 +115,8 @@ public class TransacaoControllerTest {
     @Test
     public void whenGetAll_Aluno() throws Exception {
 
-        given(transacaoService.findAllByAlunoOuCartao(1, null, null, null))
-                .willReturn(listTransacoes);
+        when(transacaoService.findAllByAlunoOuCartao(1, null, null, null))
+                .thenReturn(listTransacoes);
 
         mvc.perform(get("/transacoes?idAluno={idAluno}", 1)
                 .contentType(MediaType.APPLICATION_JSON))
@@ -135,8 +130,8 @@ public class TransacaoControllerTest {
     @Test
     public void whenGetAll_Cartao() throws Exception {
 
-        given(transacaoService.findAllByAlunoOuCartao(null, "123456", null, null))
-                .willReturn(listTransacoes);
+        when(transacaoService.findAllByAlunoOuCartao(null, "123456", null, null))
+                .thenReturn(listTransacoes);
 
         mvc.perform(get("/transacoes?numeroCartao={numcartao}", "123456")
                 .contentType(MediaType.APPLICATION_JSON))
@@ -150,8 +145,8 @@ public class TransacaoControllerTest {
     @Test
     public void whenGetAll_AlunoData() throws Exception {
 
-        given(transacaoService.findAllByAlunoOuCartao(1, null, "2020-01-01", "2020-12-30"))
-                .willReturn(listTransacoes);
+        when(transacaoService.findAllByAlunoOuCartao(1, null, "2020-01-01", "2020-12-30"))
+                .thenReturn(listTransacoes);
 
         mvc.perform(get("/transacoes?idAluno={idAluno}&dataIni={dataIni}&dataFim={dataFim}", 1, "2020-01-01", "2020-12-30")
                 .contentType(MediaType.APPLICATION_JSON))
@@ -165,8 +160,8 @@ public class TransacaoControllerTest {
     @Test
     public void whenGetAll_CartaoData() throws Exception {
 
-        given(transacaoService.findAllByAlunoOuCartao(null,"123456", "2020-01-01", "2020-12-30"))
-                .willReturn(listTransacoes);
+        when(transacaoService.findAllByAlunoOuCartao(null,"123456", "2020-01-01", "2020-12-30"))
+                .thenReturn(listTransacoes);
 
         mvc.perform(get("/transacoes?numeroCartao={numeroCartao}&dataIni={dataIni}&dataFim={dataFim}", "123456", "2020-01-01", "2020-12-30")
                 .contentType(MediaType.APPLICATION_JSON))
@@ -180,8 +175,8 @@ public class TransacaoControllerTest {
     @Test
     public void whenGetById_TransacaoFound() throws Exception {
 
-        given(transacaoService.findById(1))
-                .willReturn(new TransacaoDTO(transacao1));
+        when(transacaoService.findById(1))
+                .thenReturn(new TransacaoDTO(transacao1));
 
         mvc.perform(get("/transacoes/{id}", 1))
                 .andExpect(status().isOk())
@@ -191,8 +186,8 @@ public class TransacaoControllerTest {
     @Test
     public void whenGetById_TransacaoNotFound() throws Exception {
 
-        given(transacaoService.findById(5))
-                .willThrow(new ResponseStatusException(HttpStatus.NOT_FOUND));
+        when(transacaoService.findById(5))
+                .thenThrow(new ResponseStatusException(HttpStatus.NOT_FOUND));
 
         mvc.perform(get("/transacoes/{id}", 5))
                 .andExpect(status().isNotFound());
@@ -207,10 +202,10 @@ public class TransacaoControllerTest {
         createTransacaoDTO.setNumeroCartao(transacao1.getCartao().getNumero());
         createTransacaoDTO.setValor(transacao1.getValor());
 
-        given(transacaoService.create(createTransacaoDTO))
-                .willReturn(new TransacaoDTO(transacao1));
+        when(transacaoService.create(createTransacaoDTO))
+                .thenReturn(new TransacaoDTO(transacao1));
 
-        mvc.perform(post("/transacoes", 1)
+        mvc.perform(post("/transacoes")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(asJsonString(createTransacaoDTO)))
                 .andExpect(status().isCreated());

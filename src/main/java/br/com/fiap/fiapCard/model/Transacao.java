@@ -43,6 +43,13 @@ public class Transacao {
         this.estabelecimento = createTransacaoDTO.getEstabelecimento();
     }
 
+    public Transacao(Cartao cartao, Date data, double valor, String estabelecimento) {
+        this.cartao = cartao;
+        this.data = data;
+        this.valor = valor;
+        this.estabelecimento = estabelecimento;
+    }
+
     public Integer getId() {
         return id;
     }

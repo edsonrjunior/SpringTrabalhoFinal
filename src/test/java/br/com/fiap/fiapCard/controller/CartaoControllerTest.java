@@ -1,7 +1,6 @@
 package br.com.fiap.fiapCard.controller;
 
 import br.com.fiap.fiapCard.dto.CartaoDTO;
-import br.com.fiap.fiapCard.dto.CreateAlunoDTO;
 import br.com.fiap.fiapCard.dto.CreateCartaoDTO;
 import br.com.fiap.fiapCard.enums.StatusCartao;
 import br.com.fiap.fiapCard.model.Aluno;
@@ -19,18 +18,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.*;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
-import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(CartaoController.class)
@@ -73,7 +70,7 @@ public class CartaoControllerTest {
 
     @Test
     public void whenGetAll_CartaoFound() throws Exception {
-        given(cartaoService.findAll()).willReturn(listCartoes);
+        when(cartaoService.findAll()).thenReturn(listCartoes);
 
         mvc.perform(get("/cartoes")
             .contentType(MediaType.APPLICATION_JSON))
@@ -86,7 +83,7 @@ public class CartaoControllerTest {
     public void whenGetAll_CartaoNotFound() throws Exception {
         List<CartaoDTO> listCartoesVazio = new ArrayList<CartaoDTO>();
 
-        given(cartaoService.findAll()).willReturn(listCartoesVazio);
+        when(cartaoService.findAll()).thenReturn(listCartoesVazio);
 
         mvc.perform(get("/cartoes")
                 .contentType(MediaType.APPLICATION_JSON))
@@ -96,7 +93,7 @@ public class CartaoControllerTest {
 
     @Test
     public void whenFindById_CartaoFound() throws Exception {
-        given(cartaoService.findById(1)).willReturn(cartaoDTO);
+        when(cartaoService.findById(1)).thenReturn(cartaoDTO);
 
         mvc.perform(get("/cartoes/{id}", 1)
                 .contentType(MediaType.APPLICATION_JSON))
@@ -117,7 +114,7 @@ public class CartaoControllerTest {
 
     @Test
     public void whenCreate_CartaoCreated() throws Exception {
-        given(cartaoService.create(createCartaoDTO)).willReturn(cartaoDTO);
+        when(cartaoService.create(createCartaoDTO)).thenReturn(cartaoDTO);
 
         mvc.perform(post("/cartoes")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -128,7 +125,7 @@ public class CartaoControllerTest {
     @Test
     public void whenAtivar_CartaoActivated() throws Exception {
         cartaoDTO.setStatus(StatusCartao.ATIVO);
-        given(cartaoService.ativarCartao(1)).willReturn(cartaoDTO);
+        when(cartaoService.ativarCartao(1)).thenReturn(cartaoDTO);
 
         mvc.perform(put("/cartoes/{id}/ativar", 1)
                 .contentType(MediaType.APPLICATION_JSON))
@@ -140,7 +137,7 @@ public class CartaoControllerTest {
     @Test
     public void whenBloquear_CartaoBlocked() throws Exception {
         cartaoDTO.setStatus(StatusCartao.BLOQUEADO);
-        given(cartaoService.bloquearCartao(1)).willReturn(cartaoDTO);
+        when(cartaoService.bloquearCartao(1)).thenReturn(cartaoDTO);
 
         mvc.perform(put("/cartoes/{id}/bloquear", 1)
                 .contentType(MediaType.APPLICATION_JSON))

@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -45,7 +44,7 @@ public class AlunoControllerTest {
         Aluno aluno = new Aluno(1, 123456, "Aluno Teste");
         List<AlunoDTO> listAlunos = Arrays.asList(new AlunoDTO(aluno));
 
-        given(alunoService.findAll(null)).willReturn(listAlunos);
+        when(alunoService.findAll(null)).thenReturn(listAlunos);
 
         mvc.perform(get("/alunos")
             .contentType(MediaType.APPLICATION_JSON))
@@ -59,7 +58,7 @@ public class AlunoControllerTest {
         Aluno aluno = new Aluno(1, 123456, "Aluno Teste");
         List<AlunoDTO> listAlunos = Arrays.asList(new AlunoDTO(aluno));
 
-        given(alunoService.findAll(aluno.getNome())).willReturn(listAlunos);
+        when(alunoService.findAll(aluno.getNome())).thenReturn(listAlunos);
 
         mvc.perform(get("/alunos?nome=" + aluno.getNome())
                 .contentType(MediaType.APPLICATION_JSON))
@@ -72,7 +71,7 @@ public class AlunoControllerTest {
     public void whenGetAll_AlunoNotFound() throws Exception {
         List<AlunoDTO> listAlunos = new ArrayList<AlunoDTO>();
 
-        given(alunoService.findAll(null)).willReturn(listAlunos);
+        when(alunoService.findAll(null)).thenReturn(listAlunos);
 
         mvc.perform(get("/alunos")
                 .contentType(MediaType.APPLICATION_JSON))
@@ -85,7 +84,7 @@ public class AlunoControllerTest {
         Aluno aluno = new Aluno(1, 123456, "Aluno Teste");
         AlunoDTO alunoDTO = new AlunoDTO(aluno);
 
-        given(alunoService.findById(1)).willReturn(alunoDTO);
+        when(alunoService.findById(1)).thenReturn(alunoDTO);
 
         mvc.perform(get("/alunos/{id}", 1)
                 .contentType(MediaType.APPLICATION_JSON))
@@ -111,7 +110,7 @@ public class AlunoControllerTest {
         createAlunoDTO.setNome(aluno.getNome());
         AlunoDTO alunoDTO = new AlunoDTO(aluno);
 
-        given(alunoService.create(createAlunoDTO)).willReturn(alunoDTO);
+        when(alunoService.create(createAlunoDTO)).thenReturn(alunoDTO);
 
         mvc.perform(post("/alunos")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -127,7 +126,7 @@ public class AlunoControllerTest {
         createAlunoDTO.setNome(aluno.getNome());
         AlunoDTO alunoDTO = new AlunoDTO(aluno);
 
-        given(alunoService.update(1, createAlunoDTO)).willReturn(alunoDTO);
+        when(alunoService.update(1, createAlunoDTO)).thenReturn(alunoDTO);
 
         mvc.perform(put("/alunos/{id}", 1)
                 .contentType(MediaType.APPLICATION_JSON)

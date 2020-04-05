@@ -3,6 +3,7 @@ package br.com.fiap.fiapCard.repository;
 import br.com.fiap.fiapCard.enums.StatusCartao;
 import br.com.fiap.fiapCard.model.Aluno;
 import br.com.fiap.fiapCard.model.Cartao;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +49,7 @@ public class CartaoRepositoryTest {
 
         Cartao encontrados = cartaoRepository.findByNumero(cartao.getNumero()).get();
 
-        assert(encontrados.getNumero()).equals(cartao.getNumero());
+        Assert.assertEquals(encontrados.getNumero(), cartao.getNumero());
 
     }
 

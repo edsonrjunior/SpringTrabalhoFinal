@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67677566-054c-4aea-bec0-633f96f4b26c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/repository/TransacaoRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/TransacaoServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/model/Transacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/model/Transacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/controller/AlunoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/controller/AlunoControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/controller/CartaoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/controller/CartaoControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/controller/TransacaoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/controller/TransacaoControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/repository/CartaoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/repository/CartaoRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/TransacaoServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/TransacaoServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,22 +335,22 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="446" y="307" key="FileDocumentManager.FileCacheConflict/0.0.1680.1010@0.0.1680.1010" timestamp="1584234425299" />
-    <state width="1637" height="316" key="GridCell.Tab.0.bottom" timestamp="1586057571375">
+    <state width="1637" height="316" key="GridCell.Tab.0.bottom" timestamp="1586057817575">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="316" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1586057571375" />
-    <state width="1637" height="316" key="GridCell.Tab.0.center" timestamp="1586057571374">
+    <state width="1637" height="316" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1586057817575" />
+    <state width="1637" height="316" key="GridCell.Tab.0.center" timestamp="1586057817575">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="316" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1586057571374" />
-    <state width="1637" height="316" key="GridCell.Tab.0.left" timestamp="1586057571374">
+    <state width="1637" height="316" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1586057817575" />
+    <state width="1637" height="316" key="GridCell.Tab.0.left" timestamp="1586057817575">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="316" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1586057571374" />
-    <state width="1637" height="316" key="GridCell.Tab.0.right" timestamp="1586057571374">
+    <state width="1637" height="316" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1586057817575" />
+    <state width="1637" height="316" key="GridCell.Tab.0.right" timestamp="1586057817575">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1637" height="316" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1586057571374" />
+    <state width="1637" height="316" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1586057817575" />
     <state width="1637" height="354" key="GridCell.Tab.1.bottom" timestamp="1585763525299">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

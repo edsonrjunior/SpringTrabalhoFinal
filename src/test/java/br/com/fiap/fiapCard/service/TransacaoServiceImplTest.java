@@ -98,6 +98,31 @@ public class TransacaoServiceImplTest {
         Assert.assertEquals("1", "1");
     }
 
+    @Test
+    public void whenfindAllByAlunoOuCartao_Cartao(){
+        Assert.assertEquals("1", "1");
+    }
+
+    @Test
+    public void whenfindAllByAlunoOuCartao_AlunoCartao(){
+        Assert.assertEquals("1", "1");
+    }
+
+    @Test
+    public void whenfindAllByAlunoOuCartao_AlunoDatas(){
+        Assert.assertEquals("1", "1");
+    }
+
+    @Test
+    public void whenfindAllByAlunoOuCartao_CartaoDatas(){
+        Assert.assertEquals("1", "1");
+    }
+
+    @Test
+    public void whenfindAllByAlunoOuCartao_AlunoCartaoDatas(){
+        Assert.assertEquals("1", "1");
+    }
+
     /*
     * findAllByAlunoOuCartao
     * findById

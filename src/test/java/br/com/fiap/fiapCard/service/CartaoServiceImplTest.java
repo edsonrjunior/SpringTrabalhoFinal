@@ -158,6 +158,7 @@ public class CartaoServiceImplTest {
 
     @Test
     public void whencreate_thenCartaoCreated() {
+        when(cartaoRepository.save(any(Cartao.class))).thenReturn(cartao);
         CartaoDTO created = cartaoService.create(createCartaoDTO);
 
         Assertions.assertEquals(created.getNumero(), cartao.getNumero());

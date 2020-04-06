@@ -134,6 +134,7 @@ public class TransacaoServiceImpl implements TransacaoService {
     }
 
     private Date StringToDate(String data) {
+        if (data == null) {return null;}
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         try {
             return simpleDateFormat.parse(data);

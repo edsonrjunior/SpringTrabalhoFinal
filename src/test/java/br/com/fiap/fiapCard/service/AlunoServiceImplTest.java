@@ -110,8 +110,8 @@ public class AlunoServiceImplTest {
 
     @Test
     public void whenCreate_thenAlunoCreated() {
+        when(alunoRepository.save(any(Aluno.class))).thenReturn(aluno);
         AlunoDTO created = alunoService.create(createAlunoDTO);
-
         assert(created.getNome())
                 .equals(aluno.getNome());
     }

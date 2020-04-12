@@ -12,5 +12,9 @@ spring:
       ddl-auto: update
     database-platform: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
+  batch:
+    job:
+      enabled: false
 
-
+file:
+  input: classpath:lista_alunos.txt

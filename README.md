@@ -56,6 +56,8 @@ Há no repositório uma collection do Postman com exemplo de chamada para cada e
 
 * **Transações:** Controla as transações. Consultar documentação via Swagger
 
+* **Batch:** Faz a carga do arquivo txt na base MySQL. Consultar documentação via Swagger
+
 Link: http://localhost:8080/swagger-ui.html
 
 ## Ferramentas utilizadas

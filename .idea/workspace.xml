@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="67677566-054c-4aea-bec0-633f96f4b26c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/TransacaoServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/fiap/fiapCard/service/TransacaoServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +233,9 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="67677566-054c-4aea-bec0-633f96f4b26c" name="Default Changelist" comment="" />
@@ -367,6 +370,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1637" height="354" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1585763525299" />
+    <state x="440" y="193" key="IDE.errors.dialog" timestamp="1586710147479">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="193" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586710147479" />
     <state x="607" y="216" key="RollbackChangesDialog" timestamp="1585751511697">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

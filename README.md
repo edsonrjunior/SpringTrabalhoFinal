@@ -2,7 +2,7 @@
 
 - [x] MS de Cadastro de Alunos, Cartões e Transações
 - [x] Documentação Swagger para os endpoints já criados 
-- [ ] Carga do arquivo TXT (Spring Batch)
+- [x] Carga do arquivo TXT (Spring Batch)
 - [x] Endpoints de Transações
 - [x] Testes unitários Alunos
 - [x] Testes unitários Cartões
@@ -44,6 +44,7 @@ A aplicação irá inicializar o serviço.
 * **Alunos:** http://localhost:8080/alunos
 * **Cartões:** http://localhost:8080/cartoes
 * **Transacoes:** http://localhost:8080/transacoes
+* **Carga batch:** http://localhost:8080/batch
 
 Há no repositório uma collection do Postman com exemplo de chamada para cada endpoint. 
 
@@ -65,4 +66,3 @@ Para esta aplicação foram escolhidas as seguintes ferramentas:
   - **MYSQL** - É gratuito e leve, mesmo suportando aplicações robustas
   - **H2** - Banco de dados em memória. Utilizado para executar a aplicação em ambiente local para facilitar o desenvolvimento 
 - **Docker** e **Docker-compose** - Facilitam a portabilidade das aplicações possibilitando deploy em diversas plataformas de forma rápida e transparente
-

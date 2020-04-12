@@ -24,6 +24,12 @@ public class Aluno {
     public Aluno() {
     }
 
+    public Aluno(Integer id, Integer matricula, String nome) {
+        this.id = id;
+        this.matricula = matricula;
+        this.nome = nome;
+    }
+
     public Aluno(Integer id, Integer matricula, String nome, String codigo) {
         this.id = id;
         this.matricula = matricula;

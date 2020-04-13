@@ -10,7 +10,7 @@
 - [ ] Testes integrados
 - [x] Criar o readme com as instruções para subir aplicação
 - [x] Readme deve conter também as justificativas de uso das ferramentas (banco de dados MYSQL, docker, etc.)
-- [ ] Massa simulada de transações (Postman) (Em andamento)
+- [x] Massa simulada de transações (Postman) (Em andamento)
 - [ ] Plus a mais: Controle de usuários com Spring Security
 
 
@@ -32,6 +32,10 @@ O primeiro passo é clonar o repositório do Github e entrar no diretório da ap
     git clone https://github.com/hodestito/SpringTrabalhoFinal.git
     cd SpringTrabalhoFinal
 
+Importar a Collection via Postman, caso necessite de uma massa para testes (executar o conjunto ˜Insere Massa de Testes˜.
+    
+    FiapCard.postman_collection.json
+     
 Toda a configuração necessária está contida no arquivo `docker-compose.yaml`. Para fazer o deploy executar o comando abaixo:
 
     docker-compose up

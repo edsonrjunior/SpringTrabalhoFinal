@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b58cdeb7-2a24-44df-9f50-ddc5db77f213",
+		"_postman_id": "dc63d1bf-5ba9-4e9b-b092-a2ae4578199a",
 		"name": "FiapCard",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -227,6 +227,2055 @@
 									"value": "1",
 									"disabled": true
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Insere Massa de Testes",
+			"item": [
+				{
+					"name": "Criar Aluno 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce54bf55-ce12-4b3c-abc3-cfe196de0aba",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Aluno is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"alunoId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matricula\": 10001,\r\n  \"nome\": \"Richel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Cartão Aluno 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0eaac067-6507-48db-8cfe-9dc6d57fda94",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Cartão is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"cardNumber\", response.numero);   ",
+									"   pm.environment.set(\"cardId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dataExp\": \"2020-12-30T10:01:01.000\",\r\n  \"idAluno\": {{alunoId}},\r\n  \"numero\": \"3410102333658001\",\r\n  \"valorLimite\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ativar Cartão 1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/{{cardId}}/ativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								"{{cardId}}",
+								"ativar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2020-03-21T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Pizaria Alfa\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 40.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2020-04-07T21:23:43.916Z\",\r\n  \"estabelecimento\": \"Kitchenet FIAP\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 5.50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.unset(\"alunoId\");",
+									"   pm.environment.unset(\"cardNumber\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2019-09-21T21:10:22.916Z\",\r\n  \"estabelecimento\": \"Sonda\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 789.32\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Aluno 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce54bf55-ce12-4b3c-abc3-cfe196de0aba",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Aluno is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"alunoId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matricula\": 1002,\r\n  \"nome\": \"Ana\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Cartão Aluno 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0eaac067-6507-48db-8cfe-9dc6d57fda94",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Cartão is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"cardNumber\", response.numero);",
+									"   pm.environment.set(\"cardId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dataExp\": \"2020-12-30T10:01:01.000\",\r\n  \"idAluno\": {{alunoId}},\r\n  \"numero\": \"3210102333648002\",\r\n  \"valorLimite\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ativar Cartão 2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/{{cardId}}/ativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								"{{cardId}}",
+								"ativar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.unset(\"alunoId\");",
+									"   pm.environment.unset(\"cardNumber\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2020-03-21T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Carrefour Express\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 40.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Aluno 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce54bf55-ce12-4b3c-abc3-cfe196de0aba",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Aluno is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"alunoId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matricula\": 10200,\r\n  \"nome\": \"Hugo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Cartão Aluno 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0eaac067-6507-48db-8cfe-9dc6d57fda94",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Cartão is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"cardNumber\", response.numero);",
+									"   pm.environment.set(\"cardId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dataExp\": \"2020-12-30T10:01:01.000\",\r\n  \"idAluno\": {{alunoId}},\r\n  \"numero\": \"3410102323658003\",\r\n  \"valorLimite\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ativar Cartão 3",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/{{cardId}}/ativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								"{{cardId}}",
+								"ativar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2018-01-21T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Carrefour Express\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 40.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2020-02-21T21:18:25.916Z\",\r\n  \"estabelecimento\": \"FAIP\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 150.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2019-01-20T18:28:25.916Z\",\r\n  \"estabelecimento\": \"Sonda Express\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 10.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.unset(\"alunoId\");",
+									"   pm.environment.unset(\"cardNumber\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2019-12-21T11:45:15.916Z\",\r\n  \"estabelecimento\": \"Restaurante do João\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 19.90\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Aluno 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce54bf55-ce12-4b3c-abc3-cfe196de0aba",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Aluno is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"alunoId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matricula\": 10022,\r\n  \"nome\": \"Edson\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Aluno 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce54bf55-ce12-4b3c-abc3-cfe196de0aba",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Aluno is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"alunoId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matricula\": 10333,\r\n  \"nome\": \"João\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Cartão Aluno 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0eaac067-6507-48db-8cfe-9dc6d57fda94",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Cartão is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"cardNumber\", response.numero);",
+									"   pm.environment.set(\"cardId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dataExp\": \"2020-12-30T10:01:01.000\",\r\n  \"idAluno\": {{alunoId}},\r\n  \"numero\": \"3410102333658005\",\r\n  \"valorLimite\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ativar Cartão 5",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/{{cardId}}/ativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								"{{cardId}}",
+								"ativar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2020-02-20T17:18:25.916Z\",\r\n  \"estabelecimento\": \"Bob's\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 42.10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2020-03-21T21:18:25.916Z\",\r\n  \"estabelecimento\": \"MC Donald's\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 15.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.unset(\"alunoId\");",
+									"   pm.environment.unset(\"cardNumber\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2019-08-20T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Espetinho\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 12.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Aluno 6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce54bf55-ce12-4b3c-abc3-cfe196de0aba",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Aluno is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"alunoId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matricula\": 10028,\r\n  \"nome\": \"Maria\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Cartão Aluno 6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0eaac067-6507-48db-8cfe-9dc6d57fda94",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Cartão is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"cardNumber\", response.numero);",
+									"   pm.environment.set(\"cardId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dataExp\": \"2020-12-30T10:01:01.000\",\r\n  \"idAluno\": {{alunoId}},\r\n  \"numero\": \"3410102333658006\",\r\n  \"valorLimite\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ativar Cartão 6",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/{{cardId}}/ativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								"{{cardId}}",
+								"ativar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Aluno 7",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce54bf55-ce12-4b3c-abc3-cfe196de0aba",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Aluno is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"alunoId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matricula\": 10203,\r\n  \"nome\": \"Amora\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Aluno 8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce54bf55-ce12-4b3c-abc3-cfe196de0aba",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Aluno is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"alunoId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matricula\": 10999,\r\n  \"nome\": \"Fiapinho\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Cartão Aluno 8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0eaac067-6507-48db-8cfe-9dc6d57fda94",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Cartão is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"cardNumber\", response.numero);",
+									"   pm.environment.set(\"cardId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dataExp\": \"2020-12-30T10:01:01.000\",\r\n  \"idAluno\": {{alunoId}},\r\n  \"numero\": \"3410102333658008\",\r\n  \"valorLimite\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ativar Cartão 8",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/{{cardId}}/ativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								"{{cardId}}",
+								"ativar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2020-01-21T23:18:25.916Z\",\r\n  \"estabelecimento\": \"Cervejaria Bhrama\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 450.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.unset(\"alunoId\");",
+									"   pm.environment.unset(\"cardNumber\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2019-01-01T11:18:25.916Z\",\r\n  \"estabelecimento\": \"Café\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 20.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Aluno 9",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce54bf55-ce12-4b3c-abc3-cfe196de0aba",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Aluno is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"alunoId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matricula\": 10222,\r\n  \"nome\": \"Paulo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Cartão Aluno 9",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0eaac067-6507-48db-8cfe-9dc6d57fda94",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Cartão is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"cardNumber\", response.numero);",
+									"   pm.environment.set(\"cardId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dataExp\": \"2020-12-30T10:01:01.000\",\r\n  \"idAluno\": {{alunoId}},\r\n  \"numero\": \"3410102333658009\",\r\n  \"valorLimite\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ativar Cartão 9",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/{{cardId}}/ativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								"{{cardId}}",
+								"ativar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2020-03-21T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Extra\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 4.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2020-02-21T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Cafézinho Bar\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 40.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2019-03-21T20:28:05.916Z\",\r\n  \"estabelecimento\": \"Boteco\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 40.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2019-11-21T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Pizzaria Central Express\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 98.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.unset(\"alunoId\");",
+									"   pm.environment.unset(\"cardNumber\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2020-02-26T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Famrácia Plus\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 190.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Aluno 10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce54bf55-ce12-4b3c-abc3-cfe196de0aba",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Aluno is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"alunoId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matricula\": 10890,\r\n  \"nome\": \"Danilo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Cartão Aluno 10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0eaac067-6507-48db-8cfe-9dc6d57fda94",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Cartão is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.set(\"cardNumber\", response.numero);",
+									"   pm.environment.set(\"cardId\", response.id);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dataExp\": \"2020-12-30T10:01:01.000\",\r\n  \"idAluno\": {{alunoId}},\r\n  \"numero\": \"3410102333658010\",\r\n  \"valorLimite\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ativar Cartão 10",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cartoes/{{cardId}}/ativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes",
+								"{{cardId}}",
+								"ativar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2019-11-11T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Posto Shell Express\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 1.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2019-11-11T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Posto Shell Express\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 12.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2020-03-21T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Carrefour Express\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 40.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2020-03-01T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Calçado Mania\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 100.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Transação 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9504c184-df34-4725-80c3-f6771d138a06",
+								"exec": [
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Status code for creating the new Transação is 201\", function(){",
+									"   pm.response.to.have.status(201); ",
+									"   pm.environment.unset(\"alunoId\");",
+									"   pm.environment.unset(\"cardNumber\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": \"2019-04-21T21:18:25.916Z\",\r\n  \"estabelecimento\": \"Dentista Now\",\r\n  \"numeroCartao\": {{cardNumber}},\r\n  \"valor\": 50.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/transacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transacoes"
 							]
 						}
 					},

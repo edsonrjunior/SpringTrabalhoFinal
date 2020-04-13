@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="67677566-054c-4aea-bec0-633f96f4b26c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/model/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/fiapCard/model/Aluno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FiapCard.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/FiapCard.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,22 +24,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="FiapCard" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="FiapCard" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="FiapCard" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -82,7 +68,15 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -238,13 +232,21 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="FiapCardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="FiapCard.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.fiap.fiapCard.FiapCardApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.FiapCardApplication" />
       <item itemvalue="Gradle.FiapCard [bootRun]" />
       <item itemvalue="Gradle.CartaoRepositoryTest.whenFindByNumero_thenReturnCartao" />
       <item itemvalue="Gradle.TransacaoRepositoryTest" />
       <item itemvalue="Gradle.TransacaoServiceImplTest" />
-      <item itemvalue="Application.FiapCardApplication" />
       <item itemvalue="Gradle.FiapCardApplicationTests" />
+      <item itemvalue="Spring Boot.FiapCardApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -266,6 +268,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584232287626</updated>
+      <workItem from="1586732501441" duration="2063000" />
     </task>
     <task id="LOCAL-00001" summary="Refatoração da aplicação em um só MS.">
       <created>1585274504296</created>
@@ -304,6 +307,9 @@
     </task>
     <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -448,9 +454,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="496" y="233" width="672" height="677" key="run.anything.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1584275526595" />
-    <state x="503" y="217" width="672" height="678" key="search.everywhere.popup" timestamp="1585519510461">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state x="469" y="211" width="670" height="589" key="search.everywhere.popup" timestamp="1586738974037">
+      <screen x="54" y="23" width="1386" height="877" />
     </state>
     <state x="503" y="217" width="672" height="678" key="search.everywhere.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1585519510461" />
+    <state x="469" y="211" width="670" height="589" key="search.everywhere.popup/54.23.1386.877@54.23.1386.877" timestamp="1586738974037" />
   </component>
 </project>

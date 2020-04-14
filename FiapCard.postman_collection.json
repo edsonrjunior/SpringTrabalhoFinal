@@ -239,6 +239,309 @@
 			"name": "Insere Massa de Testes",
 			"item": [
 				{
+					"name": "Utilizando as consultas baseadas na massa de teste criada",
+					"item": [
+						{
+							"name": "Extrato Cartão Aluno 1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/transacoes?dataIni=2019-09-01&dataFim=2020-04-26&numeroCartao=3410102333658001",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transacoes"
+									],
+									"query": [
+										{
+											"key": "dataIni",
+											"value": "2019-09-01"
+										},
+										{
+											"key": "dataFim",
+											"value": "2020-04-26"
+										},
+										{
+											"key": "numeroCartao",
+											"value": "3410102333658001"
+										},
+										{
+											"key": "idAluno",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Extrato Cartão Aluno 2",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/transacoes?dataIni=2018-03-21&dataFim=2020-04-26&numeroCartao=3210102333648002",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transacoes"
+									],
+									"query": [
+										{
+											"key": "dataIni",
+											"value": "2018-03-21"
+										},
+										{
+											"key": "dataFim",
+											"value": "2020-04-26"
+										},
+										{
+											"key": "numeroCartao",
+											"value": "3210102333648002"
+										},
+										{
+											"key": "idAluno",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Extrato Cartão Aluno 3",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/transacoes?dataIni=2010-03-21&dataFim=2021-04-26&numeroCartao=3410102323658003",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transacoes"
+									],
+									"query": [
+										{
+											"key": "dataIni",
+											"value": "2010-03-21"
+										},
+										{
+											"key": "dataFim",
+											"value": "2021-04-26"
+										},
+										{
+											"key": "numeroCartao",
+											"value": "3410102323658003"
+										},
+										{
+											"key": "idAluno",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Extrato Cartão Aluno 5",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/transacoes?dataIni=2018-03-21&dataFim=2020-03-26&numeroCartao=3410102333658005",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transacoes"
+									],
+									"query": [
+										{
+											"key": "dataIni",
+											"value": "2018-03-21"
+										},
+										{
+											"key": "dataFim",
+											"value": "2020-03-26"
+										},
+										{
+											"key": "numeroCartao",
+											"value": "3410102333658005"
+										},
+										{
+											"key": "idAluno",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Extrato Cartão Aluno 6",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/transacoes?dataIni=2019-03-21&dataFim=2020-03-26&numeroCartao=3410102333658006",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transacoes"
+									],
+									"query": [
+										{
+											"key": "dataIni",
+											"value": "2019-03-21"
+										},
+										{
+											"key": "dataFim",
+											"value": "2020-03-26"
+										},
+										{
+											"key": "numeroCartao",
+											"value": "3410102333658006"
+										},
+										{
+											"key": "idAluno",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Extrato Cartão Aluno 8",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/transacoes?dataIni=2018-03-21&dataFim=2020-04-26&numeroCartao=3410102333658008",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transacoes"
+									],
+									"query": [
+										{
+											"key": "dataIni",
+											"value": "2018-03-21"
+										},
+										{
+											"key": "dataFim",
+											"value": "2020-04-26"
+										},
+										{
+											"key": "numeroCartao",
+											"value": "3410102333658008"
+										},
+										{
+											"key": "idAluno",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Extrato Cartão Aluno 9",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/transacoes?dataIni=2019-03-21&dataFim=2020-03-26&numeroCartao=3410102333658009",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transacoes"
+									],
+									"query": [
+										{
+											"key": "dataIni",
+											"value": "2019-03-21"
+										},
+										{
+											"key": "dataFim",
+											"value": "2020-03-26"
+										},
+										{
+											"key": "numeroCartao",
+											"value": "3410102333658009"
+										},
+										{
+											"key": "idAluno",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Extrato Cartão Aluno 10",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/transacoes?dataIni=2018-03-21&dataFim=2020-03-26&numeroCartao=3410102333658010",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transacoes"
+									],
+									"query": [
+										{
+											"key": "dataIni",
+											"value": "2018-03-21"
+										},
+										{
+											"key": "dataFim",
+											"value": "2020-03-26"
+										},
+										{
+											"key": "numeroCartao",
+											"value": "3410102333658010"
+										},
+										{
+											"key": "idAluno",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
 					"name": "Criar Aluno 1",
 					"event": [
 						{

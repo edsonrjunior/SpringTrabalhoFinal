@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="67677566-054c-4aea-bec0-633f96f4b26c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FiapCard.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/FiapCard.postman_collection.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -268,7 +267,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584232287626</updated>
-      <workItem from="1586732501441" duration="2063000" />
+      <workItem from="1586732501441" duration="2161000" />
+      <workItem from="1586822752649" duration="679000" />
     </task>
     <task id="LOCAL-00001" summary="Refatoração da aplicação em um só MS.">
       <created>1585274504296</created>
@@ -437,11 +437,12 @@
     </state>
     <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1585785267890" />
     <state x="494" y="245" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586711963475" />
-    <state x="613" y="339" key="com.intellij.ide.util.TipDialog" timestamp="1586710921002">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="497" y="309" key="com.intellij.ide.util.TipDialog" timestamp="1586822750607">
+      <screen x="54" y="23" width="1386" height="877" />
     </state>
     <state x="536" y="329" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1586055079601" />
     <state x="613" y="339" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586710921002" />
+    <state x="497" y="309" key="com.intellij.ide.util.TipDialog/54.23.1386.877@54.23.1386.877" timestamp="1586822750607" />
     <state x="544" y="398" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585515415812">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

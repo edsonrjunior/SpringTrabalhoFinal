@@ -6,9 +6,13 @@ server:
   port: 8080
 
 spring:
+  batch:
+    job:
+      enabled: false
   h2:
     console:
       enabled: true
+      path: /h2-console
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -18,3 +22,6 @@ spring:
     driverClassName: org.h2.Driver
     username: admin
     password: admin
+
+file:
+  input: classpath:lista_alunos.txt

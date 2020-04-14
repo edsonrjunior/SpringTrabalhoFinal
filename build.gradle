@@ -29,7 +29,7 @@ dependencies {
 	//}
 	//testImplementation 'org.springframework.security:spring-security-test'
 	compile group: 'mysql', name: 'mysql-connector-java'
-	runtimeOnly("com.h2database:h2")
+	//runtimeOnly("com.h2database:h2")
 }
 
 test {

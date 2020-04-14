@@ -2,7 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67677566-054c-4aea-bec0-633f96f4b26c" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/bin/main/application-mysql.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/config/BatchConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/controller/BatchController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/processor/DBWriter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/lista_alunos.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/schema-mysql.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/controller/TransacaoControllerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/repository/TransacaoRepositoryTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/service/CartaoServiceImplTest$CartaoServiceImplTestConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/service/TransacaoServiceImplTest$AlunoServiceImplTestContextConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/service/TransacaoServiceImplTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-h2.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-mysql.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schema-mysql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/application-local.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/controller/AlunoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/controller/AlunoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/controller/TransacaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/controller/TransacaoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/dto/AlunoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/dto/AlunoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/dto/CartaoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/dto/CartaoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/dto/TransacaoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/dto/TransacaoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/model/Aluno.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/model/Aluno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/model/Transacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/model/Transacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/service/Impl/CartaoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/service/Impl/CartaoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/service/Impl/TransacaoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/service/Impl/TransacaoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/service/TransacaoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/service/TransacaoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/controller/AlunoControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/controller/AlunoControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/controller/CartaoControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/controller/CartaoControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/repository/CartaoRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/repository/CartaoRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/service/CartaoServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/service/CartaoServiceImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-local.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/application-h2.yaml" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+>>>>>>> origin/master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +65,6 @@
       </state>
     </system>
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="FiapCard" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -44,8 +77,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="eds" />
         <option value="Edson Junior &lt;edsonkjr@gmail.com&gt;" />
+        <option value="eds" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,7 +89,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -65,6 +97,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -82,6 +115,12 @@
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.fiap.fiapCard.Cartao.dto" />
+      <recent name="br.com.fiap.fiapCard.Cartao.service" />
+      <recent name="br.com.fiap.fiapCard.Cartao.model" />
+      <recent name="br.com.fiap.fiapCard.Cartao.enum" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Documents\Estudo\FullStack FIAP\Spring\Trabalho\SpringTrabalhoFinal-master\src\main\resources" />
       <recent name="D:\Hugo\git\SpringTrabalhoFinal\Cartao\src\main\resources" />
@@ -90,14 +129,12 @@
       <recent name="br.com.fiap.fiapCard.controller" />
       <recent name="br.com.fiap.fiapCard.repository" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="br.com.fiap.fiapCard.Cartao.dto" />
-      <recent name="br.com.fiap.fiapCard.Cartao.service" />
-      <recent name="br.com.fiap.fiapCard.Cartao.model" />
-      <recent name="br.com.fiap.fiapCard.Cartao.enum" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\Estudo\FullStack FIAP\Spring\Trabalho\SpringTrabalhoFinal-master\src\main\resources" />
+      <recent name="D:\Documents\Estudo\FullStack FIAP\Spring\Trabalho\SpringTrabalhoFinal-master\src\main\resources\applications" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.FiapCardApplicationTests">
+  <component name="RunManager" selected="Application.FiapCardApplication">
     <configuration name="FiapCardApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.fiap.fiapCard.FiapCardApplication" />
       <module name="FiapCard.main" />
@@ -304,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586711931689</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Correção na classe Aluno para não prejudicar os testes unitários.">
+      <created>1586712719416</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586712719416</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +363,8 @@
     <MESSAGE value="Acerto na imagem do readme" />
     <MESSAGE value="Testes de Cartao" />
     <MESSAGE value="Alteração para carregar a tabela de alunos com o txt." />
-    <option name="LAST_COMMIT_MESSAGE" value="Alteração para carregar a tabela de alunos com o txt." />
+    <MESSAGE value="Correção na classe Aluno para não prejudicar os testes unitários." />
+    <option name="LAST_COMMIT_MESSAGE" value="Correção na classe Aluno para não prejudicar os testes unitários." />
   </component>
   <component name="WindowStateProjectService">
     <state x="432" y="163" key="#Auto_Import" timestamp="1585568773059">
@@ -366,11 +411,11 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="570" y="252" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1584281877415" />
-    <state x="559" y="87" key="CommitChangelistDialog2" timestamp="1586712698014">
+    <state x="559" y="87" key="CommitChangelistDialog2" timestamp="1586712730070">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="489" y="99" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1585785256126" />
-    <state x="559" y="87" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586712698014" />
+    <state x="559" y="87" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586712730070" />
     <state x="226" y="143" key="DiffContextDialog" timestamp="1586710289671">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -383,26 +428,26 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="446" y="307" key="FileDocumentManager.FileCacheConflict/0.0.1680.1010@0.0.1680.1010" timestamp="1584234425299" />
-    <state width="1865" height="262" key="GridCell.Tab.0.bottom" timestamp="1586712606655">
+    <state width="1865" height="440" key="GridCell.Tab.0.bottom" timestamp="1586830652648">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1637" height="316" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1586057817575" />
-    <state width="1865" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586712606655" />
-    <state width="1865" height="262" key="GridCell.Tab.0.center" timestamp="1586712606655">
+    <state width="1865" height="440" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586830652648" />
+    <state width="1865" height="440" key="GridCell.Tab.0.center" timestamp="1586830652648">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1637" height="316" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1586057817575" />
-    <state width="1865" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586712606655" />
-    <state width="1865" height="262" key="GridCell.Tab.0.left" timestamp="1586712606654">
+    <state width="1865" height="440" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586830652648" />
+    <state width="1865" height="440" key="GridCell.Tab.0.left" timestamp="1586830652648">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1637" height="316" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1586057817575" />
-    <state width="1865" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586712606654" />
-    <state width="1865" height="262" key="GridCell.Tab.0.right" timestamp="1586712606655">
+    <state width="1865" height="440" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586830652648" />
+    <state width="1865" height="440" key="GridCell.Tab.0.right" timestamp="1586830652648">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1637" height="316" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1586057817575" />
-    <state width="1865" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586712606655" />
+    <state width="1865" height="440" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586830652648" />
     <state width="1637" height="354" key="GridCell.Tab.1.bottom" timestamp="1585763525299">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -431,13 +476,19 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="320" y="79" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1585261754091" />
-    <state x="494" y="245" key="Vcs.Push.Dialog.v2" timestamp="1586711963475">
+    <state x="494" y="245" key="Vcs.Push.Dialog.v2" timestamp="1586712783839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1585785267890" />
+<<<<<<< HEAD
+    <state x="494" y="245" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586712783839" />
+    <state x="613" y="339" key="com.intellij.ide.util.TipDialog" timestamp="1586710921002">
+      <screen x="0" y="0" width="1920" height="1040" />
+=======
     <state x="494" y="245" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586711963475" />
     <state x="497" y="309" key="com.intellij.ide.util.TipDialog" timestamp="1586822750607">
       <screen x="54" y="23" width="1386" height="877" />
+>>>>>>> origin/master
     </state>
     <state x="536" y="329" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1586055079601" />
     <state x="613" y="339" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586710921002" />

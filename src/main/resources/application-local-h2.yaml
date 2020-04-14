@@ -1,0 +1,31 @@
+#----------------------------------------------------------------------------#
+#       CONFIGURAÇÕES PARA EXECUTAR LOCALMENTE COM BANCO DE DADOS H2         #
+#----------------------------------------------------------------------------#
+
+application:
+  config:
+    profileName: local
+
+server:
+  port: 8080
+
+spring:
+  batch:
+    job:
+      enabled: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: admin
+    password: admin
+
+file:
+  input: classpath:lista_alunos.txt

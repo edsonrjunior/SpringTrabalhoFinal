@@ -1,0 +1,31 @@
+#----------------------------------------------------------------------------#
+#       CONFIGURAÇÕES PARA EXECUTAR LOCALMENTE COM BANCO DE DADOS MYSQL      #
+#----------------------------------------------------------------------------#
+application:
+  config:
+    profileName: local
+
+server:
+  port: 8080
+
+spring:
+  batch:
+    job:
+      enabled: false
+    batch:
+      initialize-schema: always
+      job:
+        enabled: false
+  datasource:
+    url: jdbc:mysql://localhost/aluno?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: sa
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQLDialect
+      database-platform: org.hibernate.dialect.MySQL5Dialect
+      show-sql: true
+
+file:
+  input: classpath:lista_alunos.txt

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67677566-054c-4aea-bec0-633f96f4b26c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -268,7 +267,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584232287626</updated>
       <workItem from="1586732501441" duration="2161000" />
-      <workItem from="1586822752649" duration="679000" />
+      <workItem from="1586822752649" duration="895000" />
     </task>
     <task id="LOCAL-00001" summary="Refatoração da aplicação em um só MS.">
       <created>1585274504296</created>

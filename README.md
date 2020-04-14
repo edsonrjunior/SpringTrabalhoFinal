@@ -1,19 +1,3 @@
-# ToDo
-
-- [x] MS de Cadastro de Alunos, Cartões e Transações
-- [x] Documentação Swagger para os endpoints já criados 
-- [x] Carga do arquivo TXT (Spring Batch)
-- [x] Endpoints de Transações
-- [x] Testes unitários Alunos
-- [x] Testes unitários Cartões
-- [ ] Testes unitários Transações (Em andamento)
-- [ ] Testes integrados
-- [x] Criar o readme com as instruções para subir aplicação
-- [x] Readme deve conter também as justificativas de uso das ferramentas (banco de dados MYSQL, docker, etc.)
-- [x] Massa simulada de transações (Postman) (Em andamento)
-- [ ] Plus a mais: Controle de usuários com Spring Security
-
-
 # Documentação da aplicação FiapCard
 
 ## Introdução
@@ -32,16 +16,16 @@ O primeiro passo é clonar o repositório do Github e entrar no diretório da ap
     git clone https://github.com/hodestito/SpringTrabalhoFinal.git
     cd SpringTrabalhoFinal
 
-Importar a Collection via Postman, caso necessite de uma massa para testes (executar o conjunto ˜Insere Massa de Testes˜).
-    
-    FiapCard.postman_collection.json
-     
 Toda a configuração necessária está contida no arquivo `docker-compose.yaml`. Para fazer o deploy executar o comando abaixo:
 
     docker-compose up
 
 A aplicação irá inicializar o serviço.
 
+Importar a Collection via Postman, caso necessite de uma massa para testes (executar o conjunto "Insere Massa de Testes").
+    
+    FiapCard.postman_collection.json
+ 
 
 ## Chamadas aos endpoints
 
@@ -50,7 +34,7 @@ A aplicação irá inicializar o serviço.
 * **Transacoes:** http://localhost:8080/transacoes
 * **Carga batch:** http://localhost:8080/batch
 
-Há no repositório uma collection do Postman com exemplo de chamada para cada endpoint. 
+Há no repositório uma collection do Postman com exemplos de chamada e uma massa simulada para cada endpoint.
 
 ## Documentação das APIs
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67677566-054c-4aea-bec0-633f96f4b26c" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/bin/main/application-mysql.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/config/BatchConfig.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bin/main/br/com/fiap/fiapCard/controller/BatchController.class" afterDir="false" />
@@ -35,6 +36,9 @@
       <change beforePath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/service/CartaoServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/br/com/fiap/fiapCard/service/CartaoServiceImplTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-local.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/application-h2.yaml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+>>>>>>> origin/master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,22 +58,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="FiapCard" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="FiapCard" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="FiapCard" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -110,7 +99,15 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -270,6 +267,13 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="FiapCardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="FiapCard.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.fiap.fiapCard.FiapCardApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.FiapCardApplication" />
       <item itemvalue="Gradle.FiapCard [bootRun]" />
@@ -277,6 +281,7 @@
       <item itemvalue="Gradle.TransacaoRepositoryTest" />
       <item itemvalue="Gradle.TransacaoServiceImplTest" />
       <item itemvalue="Gradle.FiapCardApplicationTests" />
+      <item itemvalue="Spring Boot.FiapCardApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -298,6 +303,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584232287626</updated>
+      <workItem from="1586732501441" duration="2161000" />
+      <workItem from="1586822752649" duration="895000" />
     </task>
     <task id="LOCAL-00001" summary="Refatoração da aplicação em um só MS.">
       <created>1585274504296</created>
@@ -343,6 +350,9 @@
     </task>
     <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -470,12 +480,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1585785267890" />
+<<<<<<< HEAD
     <state x="494" y="245" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586712783839" />
     <state x="613" y="339" key="com.intellij.ide.util.TipDialog" timestamp="1586710921002">
       <screen x="0" y="0" width="1920" height="1040" />
+=======
+    <state x="494" y="245" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586711963475" />
+    <state x="497" y="309" key="com.intellij.ide.util.TipDialog" timestamp="1586822750607">
+      <screen x="54" y="23" width="1386" height="877" />
+>>>>>>> origin/master
     </state>
     <state x="536" y="329" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1586055079601" />
     <state x="613" y="339" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586710921002" />
+    <state x="497" y="309" key="com.intellij.ide.util.TipDialog/54.23.1386.877@54.23.1386.877" timestamp="1586822750607" />
     <state x="544" y="398" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585515415812">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -488,9 +505,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="496" y="233" width="672" height="677" key="run.anything.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1584275526595" />
-    <state x="503" y="217" width="672" height="678" key="search.everywhere.popup" timestamp="1585519510461">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state x="469" y="211" width="670" height="589" key="search.everywhere.popup" timestamp="1586738974037">
+      <screen x="54" y="23" width="1386" height="877" />
     </state>
     <state x="503" y="217" width="672" height="678" key="search.everywhere.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1585519510461" />
+    <state x="469" y="211" width="670" height="589" key="search.everywhere.popup/54.23.1386.877@54.23.1386.877" timestamp="1586738974037" />
   </component>
 </project>

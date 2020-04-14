@@ -20,6 +20,17 @@ Toda a configuração necessária está contida no arquivo `docker-compose.yaml`
 
     docker-compose up
 
+Após subir a aplicação no Docker, é necessário criar manualmente as tabelas de metadados do Spring Batch.
+
+1.  Abrir um novo terminal para acessar o módulo administrativo do MySQL com o comando `docker exec -it mysql mysql -p` e usar senha `mysql`
+
+![Modulo administrativo MySQL](modulo-adm-mysql.png)
+
+
+2.  Copiar todo o script do arquivo `spring-batch-metadata.sql` localizado em `\src\main\resources` e colar no terminal do módulo administrativo do MySQL
+
+![Script MySQL](script-mysql.png)
+
 A aplicação irá inicializar o serviço.
 
 Importar a Collection via Postman, caso necessite de uma massa para testes (executar o conjunto "Insere Massa de Testes").

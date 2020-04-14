@@ -1,3 +1,7 @@
+#----------------------------------------------------------------------------#
+#       CONFIGURAÇÕES PARA EXECUTAR LOCALMENTE COM BANCO DE DADOS H2         #
+#----------------------------------------------------------------------------#
+
 application:
   config:
     profileName: local
